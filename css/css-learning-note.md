@@ -9,7 +9,7 @@
 ```
 * Embedding Style Sheets
 
-在<head>之間使用
+在head之間使用
 ```html
 <head>
 	<style type="text/css">
