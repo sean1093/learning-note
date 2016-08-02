@@ -5,4 +5,4 @@
 #### [css-note] CSS Learning Note
 
 
-[css-note]: <https://github.com/sean1093/learning-note/css/css-note.md>
+[css-note]: <https://github.com/sean1093/learning-note/blob/master/css/css-learning-note.md>
