@@ -1,6 +1,6 @@
 # learning-note
 
-## Here is something learning note about HTML, CSS or JavaScript. I will continually updated. 
+Here is something learning note about HTML, CSS or JavaScript. I will continually updated. 
 
 #### [css-note] CSS Learning Note
 
