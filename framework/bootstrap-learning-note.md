@@ -6,9 +6,9 @@
 當然，還有很多其他很有名的 CSS framework ，像是 yahoo 的 [Prue.css] 或是 Zurb 的 [Fundation] 。因此，[Bootstrap] 並不是唯一可以做 RWD 的前端框架，在開發的時候只要選擇一套最適合自己的一套即可。
 
 ### Template 資源
-[Bootstrap] 在網路上有許多的 template資源，最被大家使用的就是 [Start Bootstrap] ，或是許多都要收費的 [wrap bootstrap]。
-[startBootstrap img]
- 
+[Bootstrap] 在網路上有許多的 template資源，最被大家使用的就是 [Start Bootstrap]。
+![startBootstrap img](https://github.com/sean1093/learning-note/blob/master/img/startBootstrap.png "startBootstrap")
+
 ### CSS 元件
 
 ### Grid 的設計方法
@@ -27,4 +27,3 @@
 [Start Bootstrap]: <https://startbootstrap.com/>
 [wrap bootstrap]: <https://wrapbootstrap.com/>
 
-![startBootstrap img](https://github.com/sean1093/learning-note/blob/master/img/startBootstrap.png "startBootstrap")
