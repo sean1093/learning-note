@@ -14,6 +14,7 @@ Bootstrap 3 以 mobile first 為主，與之前版本的 bootstrap 不一樣。
 
 #### 如何使用
 * 下載與安裝
+
 直接import js與css
 
 
@@ -23,6 +24,7 @@ Bootstrap 3 以 mobile first 為主，與之前版本的 bootstrap 不一樣。
 Bootstrap 需要一個 .container 來裝整個 grid system，可以使用兩種不同的 css class:
 * .container
 * .container-fluid
+
 設計方法： container 之中會包含多個 row ，用這些 row 來裝切分為12等分的 column
 
 
