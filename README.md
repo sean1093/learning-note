@@ -1,7 +1,7 @@
 # learning-note
 
 Here is something learning note about HTML, CSS or JavaScript.
-這裡是一些技術的自我學習筆記。 
+一些技術的自我學習筆記。 
 
 
 #### [css-note] CSS Learning Note
