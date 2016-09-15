@@ -12,10 +12,23 @@ Bootstrap 3 以 mobile first 為主，與之前版本的 bootstrap 不一樣。
 * 下載與安裝
 
 直接import js與css
+```html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-### CSS 元件
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+```
 
+Install with Bower
+```bash
+$ bower install bootstrap
+```
+
+Install with npm
+```bash
+$ npm install bootstrap@3
+```
 
 
 ### Grid 的設計方法
@@ -34,17 +47,69 @@ Bootstrap 需要一個 .container 來裝整個 grid system，可以使用兩種�
 詳細內容可以參考官方提供的表格: [grid-options]
 
 一般來說在設計的時候，container (.container or .container-fluid) 之中會包含多個 row ，用這些 row 來裝切分為12等分的 column。
- ex:
+ex:
 ```html
 <div class="container">
     <div class="row">
-        <div class=".col-md-6">
-        </div>
-        <div class=".col-md-6">
-        </div>
+        <div class=".col-md-6">A</div>
+        <div class=".col-md-6">B</div>
     </div>
 </div>
 ```
+
+在Grid system之中，總共平分為12等分。舉例來說，如果頁面設計在一般螢幕左右兩欄A與B要在手機瀏覽時候變成上下排列，可以利用col-md-6與col-xs-12來達成。
+ex:
+```html
+<div class="container">
+    <div class="row">
+        <div class=".col-md-6 col-xs-12">A</div>
+        <div class=".col-md-6 col-xs-12">B</div>
+    </div>
+</div>
+```
+
+#####Column wrapping
+當超過12等分的時候，將會自動換行到下一列，原則就是column的總數是以12為一列。
+ex:
+```html
+<!--此例下的C就會被擠到下一列-->
+<div class="container">
+    <div class="row">
+        <div class=".col-md-6">A</div>
+        <div class=".col-md-5">B</div>
+        <div class=".col-md-6">C</div>
+    </div>
+</div>
+```
+
+#####Responsive column resets
+此外，當你的column高度不一樣的時候，可以使用.clearfix來做平衡調整。
+```html
+<div class="row">
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+  <!-- Add the extra clearfix for only the required viewport -->
+  <div class="clearfix visible-xs-block"></div>
+
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+</div>
+```
+
+另外也可以對column坐位移，利用.col-md-offset-*來達成效果。
+ex:
+```html
+<div class="container">
+    <div class="row">
+        <div class=".col-md-6 .col-md-offset-4">A</div>
+        <div class=".col-md-2">B</div>
+    </div>
+</div>
+```
+
+
+### CSS 元件
 
 
 
