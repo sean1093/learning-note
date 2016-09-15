@@ -7,10 +7,6 @@
 
 Bootstrap 3 以 mobile first 為主，與之前版本的 bootstrap 不一樣。
 
-#### Template 資源
-[Bootstrap] 在網路上有許多的 template資源，比如說: [Start Bootstrap]
-
-![startBootstrap img](https://github.com/sean1093/learning-note/blob/master/img/startBootstrap.png "startBootstrap")
 
 #### 如何使用
 * 下載與安裝
@@ -19,6 +15,8 @@ Bootstrap 3 以 mobile first 為主，與之前版本的 bootstrap 不一樣。
 
 
 ### CSS 元件
+
+
 
 ### Grid 的設計方法
 Bootstrap 需要一個 .container 來裝整個 grid system，可以使用兩種不同的 css class:
