@@ -23,7 +23,28 @@ Bootstrap 需要一個 .container 來裝整個 grid system，可以使用兩種�
 * .container
 * .container-fluid
 
-設計方法： container 之中會包含多個 row ，用這些 row 來裝切分為12等分的 column
+####設計方法： 
+一個頁面主要會由container、row與column組合而成。
+
+其中，column的class分為四種大小:
+* .col-xs- : Extra small devices Phones (<768px)
+* .col-sm- : Small devices Tablets (≥768px)
+* .col-md- : Medium devices Desktops (≥992px)
+* .col-lg- : Large devices Desktops (≥1200px)
+詳細內容可以參考官方提供的表格: [grid-options]
+
+一般來說在設計的時候，container (.container or .container-fluid) 之中會包含多個 row ，用這些 row 來裝切分為12等分的 column。
+ ex:
+```html
+<div class="container">
+    <div class="row">
+        <div class=".col-md-6">
+        </div>
+        <div class=".col-md-6">
+        </div>
+    </div>
+</div>
+```
 
 
 
@@ -37,3 +58,5 @@ Bootstrap 需要一個 .container 來裝整個 grid system，可以使用兩種�
 [Start Bootstrap]: <https://startbootstrap.com/>
 [wrap bootstrap]: <https://wrapbootstrap.com/>
 [BootstrapCDN]: <https://www.bootstrapcdn.com/>
+[grid-options]: <http://getbootstrap.com/css/#grid-options>
+
