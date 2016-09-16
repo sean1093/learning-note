@@ -73,8 +73,12 @@ ex:
 ```html
 <div class="container">
     <div class="row">
-        <div class=".col-md-6">A</div>
-        <div class=".col-md-6">B</div>
+        <div class=".col-md-6">A-1</div>
+        <div class=".col-md-6">B-1</div>
+    </div>
+    <div class="row">
+        <div class=".col-md-4">A-2</div>
+        <div class=".col-md-8">B-2</div>
     </div>
 </div>
 ```
