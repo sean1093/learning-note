@@ -30,6 +30,28 @@ Install with npm
 $ npm install bootstrap@3
 ```
 
+P.S. 如果有需要用到Bootstrap的JavaScript外掛，就必須要include JQuery.
+
+* 基本template
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Template</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
+```
+
 
 ### Grid 的設計方法
 Bootstrap 需要一個 .container 來裝整個 grid system，可以使用兩種不同的 css class:
@@ -110,8 +132,7 @@ ex:
 
 
 ### CSS 元件
-
-
+Bootstrap還提供了許多CSS元件可以使用，如button, form 等等，詳細內容參考官方文件: [Bootstrap-css]
 
 
 
@@ -124,4 +145,6 @@ ex:
 [wrap bootstrap]: <https://wrapbootstrap.com/>
 [BootstrapCDN]: <https://www.bootstrapcdn.com/>
 [grid-options]: <http://getbootstrap.com/css/#grid-options>
+[Bootstrap-css]: <http://getbootstrap.com/css/>
+
 
