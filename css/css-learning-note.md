@@ -36,5 +36,4 @@
 
 
 
-![box-model](/img/boxModel.jpg "Box Model")
-
+![box-model](https://github.com/sean1093/learning-note/blob/master/img/boxModel.JPG "Box Model")
