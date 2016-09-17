@@ -32,7 +32,7 @@
 
 ### box model
 決定元素大小的呈現方式，設定值有以下三種: content-box(預設值)、border-box 及 padding-box。
-[box-model]
+![box-model](https://github.com/sean1093/learning-note/blob/master/img/boxModel.JPG "Box Model")
 
 content-box
 Width = width + padding-left + padding-right + border-left + border-right
@@ -53,4 +53,4 @@ Width = width(包含padding-left + padding-right + border-left + border-right)
 分為三種: relative、absolute和fixed
 
 
-![box-model](https://github.com/sean1093/learning-note/blob/master/img/boxModel.JPG "Box Model")
+
