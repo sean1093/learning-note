@@ -31,9 +31,26 @@
 
 
 ### box model
-
+決定元素大小的呈現方式，設定值有以下三種: content-box(預設值)、border-box 及 padding-box。
 [box-model]
 
+content-box
+Width = width + padding-left + padding-right + border-left + border-right
+
+padding-box
+Width = width(包含padding-left + padding-right) + border-left + border-right
+
+border-box
+Width = width(包含padding-left + padding-right + border-left + border-right)
+
+### display
+每一個元素都有他的display屬性，包含block、inline與inline-block。
+* block: 自己獨佔一行，且寬高可以自行設定，default width繼承parent node，default height 由內容決定。 
+* inline: 寬高由內容決定，與其他元素共處一行。
+* inline-block: 寬可以自行設定，與其他元素共處一行，常用於垂直置中。
+
+### position
+分為三種: relative、absolute和fixed
 
 
 ![box-model](https://github.com/sean1093/learning-note/blob/master/img/boxModel.JPG "Box Model")
