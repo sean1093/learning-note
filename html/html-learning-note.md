@@ -23,3 +23,6 @@
 
 範例: 設定寬度為裝置的寬度、縮放大小為1倍
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
+### DOM
+DOM: W3C所定義的文件物件模型 Document Object Module
