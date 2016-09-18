@@ -58,6 +58,13 @@ Bootstrap 需要一個 .container 來裝整個 grid system，可以使用兩種�
 * .container
 * .container-fluid
 
+container定義了適當的寬度：
+* screen > 768px，.container 750px
+* screen > 992px，.container 970px
+* screen > 1200px，.container 1170px
+
+而container-fluid則是採用滿版，適用於滿版的頁面設計
+
 ####設計方法： 
 一個頁面主要會由container、row與column組合而成。
 
