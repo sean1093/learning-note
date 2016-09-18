@@ -73,12 +73,12 @@ ex:
 ```html
 <div class="container">
     <div class="row">
-        <div class=".col-md-6">A-1</div>
-        <div class=".col-md-6">B-1</div>
+        <div class="col-md-6">A-1</div>
+        <div class="col-md-6">B-1</div>
     </div>
     <div class="row">
-        <div class=".col-md-4">A-2</div>
-        <div class=".col-md-8">B-2</div>
+        <div class="col-md-4">A-2</div>
+        <div class="col-md-8">B-2</div>
     </div>
 </div>
 ```
@@ -88,8 +88,8 @@ ex:
 ```html
 <div class="container">
     <div class="row">
-        <div class=".col-md-6 col-xs-12">A</div>
-        <div class=".col-md-6 col-xs-12">B</div>
+        <div class="col-md-6 col-xs-12">A</div>
+        <div class="col-md-6 col-xs-12">B</div>
     </div>
 </div>
 ```
@@ -101,9 +101,9 @@ ex:
 <!--此例下的C就會被擠到下一列-->
 <div class="container">
     <div class="row">
-        <div class=".col-md-6">A</div>
-        <div class=".col-md-5">B</div>
-        <div class=".col-md-6">C</div>
+        <div class="col-md-6">A</div>
+        <div class="col-md-5">B</div>
+        <div class="col-md-6">C</div>
     </div>
 </div>
 ```
@@ -128,8 +128,8 @@ ex:
 ```html
 <div class="container">
     <div class="row">
-        <div class=".col-md-6 .col-md-offset-4">A</div>
-        <div class=".col-md-2">B</div>
+        <div class="col-md-6 col-md-offset-4">A</div>
+        <div class="col-md-2">B</div>
     </div>
 </div>
 ```
