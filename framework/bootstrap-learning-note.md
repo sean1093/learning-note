@@ -150,6 +150,10 @@ Bootstrap還提供了許多CSS元件可以使用，如button, form 等等，詳�
 由[runoob]所製作的線上編輯器[Bootstrap-online-editor]
 
 
+### 簡易實作範例
+source code: [sample]
+
+
 
 
 [Bootstrap]: <http://getbootstrap.com/>
@@ -164,4 +168,4 @@ Bootstrap還提供了許多CSS元件可以使用，如button, form 等等，詳�
 [Bootstrap-css]: <http://getbootstrap.com/css/>
 [runoob]: <http://www.runoob.com/>
 [Bootstrap-online-editor]: <http://www.runoob.com/try/bootstrap/layoutit/>
-
+[sample]: <https://github.com/sean1093/bootstrap-startkit/blob/master/bootstrap-startKit.html>
