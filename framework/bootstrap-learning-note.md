@@ -143,7 +143,14 @@ ex:
 
 
 ### CSS 元件
-Bootstrap還提供了許多CSS元件可以使用，如button, form 等等，詳細內容參考官方文件: [Bootstrap-css]
+* Responsive img
+在RWD網頁設計中，若要使圖片能夠跟著也一起縮放，可以直接使用img-responsive這個class，如下：
+```html
+<img src="xxx.png" class="img-responsive">
+
+```
+
+* Bootstrap還提供了許多CSS元件可以使用，如button, form 等等，詳細內容參考官方文件: [Bootstrap-css]
 
 
 ### 線上編輯器
