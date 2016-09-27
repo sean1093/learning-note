@@ -1,6 +1,6 @@
 # CSS Animation Learning Note
 
-### 用法
+### 基本用法
 主要是要定義animation持續的時間與要使用的animation keyframe (動畫關鍵影格)的名稱。
 ```css
     .div1 {
@@ -41,6 +41,9 @@
         }
 ```
 
+* Sample code : [css-animation-sample]
+
+
 ### 重複播放動畫
 增加此屬性animation-iteration-count，並給予要重複的次數即可，若無限次數就給infinite
 ```css
@@ -60,6 +63,42 @@
 ```
 
 ### 動畫事件
-//TODO
+和一般事件使用一樣，必須要註冊listener
+```javascript
+    function setup() {
+      var e = document.getElementById("test");
+      e.addEventListener("animationstart", listener, false);
+      e.addEventListener("animationend", listener, false);
+      e.addEventListener("animationiteration", listener, false);
+    }
+    function listener(e) {
+      switch(e.type) {
+        case "animationstart":
+        console.log("Started: elapsed time is " + e.elapsedTime);
+          break;
+        case "animationend":
+        console.log("Ended: elapsed time is " + e.elapsedTime);
+          break;
+        case "animationiteration":
+        console.log("New loop started at time " + e.elapsedTime);
+          break;
+      }
+    }
+```
+
+在一開始執行setup()這個function
+```html
+    <body onload="setup()">
+        <div class="div1" id="test">[Hello into]</div>
+    </body>
+```
+
+* Sample code : [css-animation-event-sample]
+
+
+
+[css-animation-sample]: <https://github.com/sean1093/js-css-component/blob/master/css/animation-into-bigger.html>
+[css-animation-event-sample]: <https://github.com/sean1093/js-css-component/blob/master/css/animation-event.html>
+
 
 
