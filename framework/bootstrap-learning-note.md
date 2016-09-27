@@ -162,8 +162,9 @@ ex:
 
 
 ### 簡易實作範例
+Grid system & media query 簡單實作：
+demo: [demo]
 source code: [sample]
-
 
 
 
@@ -180,3 +181,5 @@ source code: [sample]
 [runoob]: <http://www.runoob.com/>
 [Bootstrap-online-editor]: <http://www.runoob.com/try/bootstrap/layoutit/>
 [sample]: <https://github.com/sean1093/bootstrap-startkit/blob/master/bootstrap-startKit.html>
+[demo]: <http://sean1093.github.io/demo/bootstrap/bootstrap-startKit.html>
+
