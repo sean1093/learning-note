@@ -41,13 +41,13 @@ P.S. 如果有需要用到Bootstrap的JavaScript外掛，就必須要include JQu
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap Template</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
     <h1>Hello, world!</h1>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
 ```
@@ -147,8 +147,12 @@ ex:
 在RWD網頁設計中，若要使圖片能夠跟著也一起縮放，可以直接使用img-responsive這個class，如下：
 ```html
 <img src="xxx.png" class="img-responsive">
-
 ```
+
+* Visible or Hidden
+如果要控制在不同螢幕大小，div的顯示或是隱藏，可以使用以下的classes
+  * .visible-*-block
+  * .hidden-*
 
 * Bootstrap還提供了許多CSS元件可以使用，如button, form 等等，詳細內容參考官方文件: [Bootstrap-css]
 
