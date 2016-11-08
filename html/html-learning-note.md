@@ -10,15 +10,25 @@
 ```
 
 設定寬度為320px
+```html
 <meta name="viewport" content="width="320">
+```
 設定寬度為裝置的寬度
+```html
 <meta name="viewport" content="width=device-width">
+```
 設定縮放大小為1倍
+```html
 <meta name="viewport" content="initial-scale=1">
+```
 設定縮放大小最大為1倍，但使用此設定，使用者會無法藉由放大縮小來看也面的內容
+```html
 <meta name="viewport" content="maximum-scale=1">
+```
 設定寬度為裝置的寬度、縮放大小為1倍
+```html
 <meta name="viewport" content="width=device-width,initial-scale=1">
+```
 
 
 ### DOM
