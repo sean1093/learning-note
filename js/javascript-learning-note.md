@@ -34,6 +34,7 @@ num.toString(2); //"101"
 ```
 
 * operator 
+
 +/-
 ```js
 "3" + 4 + 5    //"345"
@@ -57,13 +58,17 @@ var name = UserName || "default";
 ### call by reference
 
 ```js
+//obj1 跟 obj2 不會相等
 var obj1 = {text: 'same'};
 var obj2 = {text: 'same'};
-//obj1 跟 obj2 不會相等
+console.log(obj1 == obj2); //false
+console.log(obj1 === obj2); //false
 
+//此時 obj1 跟 obj2 才會相等，因為他們參考同一個物件
 var obj1 = {text: 'same'};
 var obj2 = obj1;
-//此時 obj1 跟 obj2 才會相等，因為他們參考同一個物件
+console.log(obj1 == obj2); //true
+console.log(obj1 === obj2); //true
 ```
 
 指定物件值的方法不同，會影響是使用 call by reference 或是 call by value
@@ -91,6 +96,7 @@ console.log(obj2.text); //same
 * 原始值
 String, Number, Boolean, null, undefined
 不是物件，儲存"值"
+
 Ex: 
 ```js
 var a1="Hello";
@@ -102,6 +108,7 @@ a2 = "World";
 * 複合值
 Object(), Array(), Function(), Date(), Error(), RegExp()
 由JavaScript物件構成，儲存"參考"
+
 Ex:
 ```js
 var myObject={};

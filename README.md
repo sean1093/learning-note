@@ -3,16 +3,32 @@
 Here is something learning note about HTML, CSS or JavaScript.
 一些技術的自我學習筆記。 
 
-#### [html-note] html basic Learning Note
-#### [css-note] CSS Learning Note
-#### [css-animation-note] CSS Animation Learning Note
-#### [bootstarp-note] Bootstarp Learning Note
+### HTML
+#### [HTML basic Learning Note] 
+
+### JavaScript
+#### [JavaScript Basic Knowledage Learning Note] 
+#### [JavaScript Object Learning Note] 
+
+### CSS
+#### [CSS Learning Note] 
+#### [CSS Animation Learning Note]
+#### [CSS RWD Note]  
+
+### Framework
+#### [Bootstarp Learning Note] 
 
 
-[html-note]: <https://github.com/sean1093/learning-note/blob/master/html/html-learning-note.md>
+[HTML basic Learning Note]: <https://github.com/sean1093/learning-note/blob/master/html/html-learning-note.md>
 
-[css-note]: <https://github.com/sean1093/learning-note/blob/master/css/css-learning-note.md>
+[JavaScript Basic Knowledage Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-note.md>
 
-[css-animation-note]: <https://github.com/sean1093/learning-note/blob/master/css/css-animation-note.md>
+[JavaScript Object Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-object-note.md>
 
-[bootstarp-note]: <https://github.com/sean1093/learning-note/blob/master/framework/bootstrap-learning-note.md>
+[CSS Learning Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-learning-note.md>
+
+[CSS Animation Learning Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-animation-note.md>
+
+[CSS RWD Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-rwd-note.md>
+
+[Bootstarp Learning Note]: <https://github.com/sean1093/learning-note/blob/master/framework/bootstrap-learning-note.md>
