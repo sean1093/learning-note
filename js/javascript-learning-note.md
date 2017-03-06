@@ -125,6 +125,30 @@ null/undefined 的時候一定要用 ===，因為 == 無法分辨 null & undefin
 
 
 ### JavaScript Bitwise Operators
-TODO
+位元運算子把他們的運算元視為一組 0 or 1，對這些二進制表示法進行運算，並返回標準的 JavaScript 數值。
+
+#### 位元邏輯運算子
+* a & b (AND): 兩個都是1才等於1
+* a | b (OR): 只要其中一個或是兩者都為1就等於1
+* a ^ b (XOR): 其中一個是1才會回傳1，兩個都是1的話會回傳0
+* ~ a (NOT): 0->1, 1->0
+
+Ex:
+* 15 & 9 = 9 (1111 & 1001 = 1001)
+* 15 | 9 = 15 (1111 | 1001 = 1111)
+* 15 ^ 9 = 6 (1111 ^ 1001 = 0110)
+
+#### 位元位移運算子
+* 左移: a << b, 左移 a 的 b 位元，從右邊補 0。
+* 維持符號右移: a >> b, 右移 a 的 b 位元，丟棄移出的位元。
+* 填 0 右移: a >>> b, 右移 a 的 b 位元，丟棄移出的位元，並從左邊補 0。
+
+* Reference
+[Bitwise_operators(mozilla)]
+[BitwiseOperation(nudt)]
+
+[Bitwise_operators(mozilla)]: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise_operators>
+
+[BitwiseOperation(nudt)]: <http://acm.nudt.edu.cn/~twcourse/BitwiseOperation.html>
 
 
