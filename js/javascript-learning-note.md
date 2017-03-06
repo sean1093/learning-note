@@ -122,3 +122,9 @@ object2.text = "Hello";
 * null：目前無法使用某個會出現得值
 * 驗證 
 null/undefined 的時候一定要用 ===，因為 == 無法分辨 null & undefined
+
+
+### JavaScript Bitwise Operators
+TODO
+
+
