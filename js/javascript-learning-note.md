@@ -144,7 +144,9 @@ Ex:
 * 填 0 右移: a >>> b, 右移 a 的 b 位元，丟棄移出的位元，並從左邊補 0。
 
 * Reference
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise_operators
+
 http://acm.nudt.edu.cn/~twcourse/BitwiseOperation.html
 
 
