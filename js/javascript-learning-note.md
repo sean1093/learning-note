@@ -124,6 +124,28 @@ object2.text = "Hello";
 null/undefined 的時候一定要用 ===，因為 == 無法分辨 null & undefined
 
 
+### setTimeout
+```js
+console.log("start");
+for(var i=0; i<5; i++){
+    setTimeout(function(){ 
+        console.log(i); 
+    }, 1);
+}
+console.log("end");
+
+/* 
+it will console:
+    start
+    end
+    5
+    5
+    5
+    5
+    5
+*/
+```
+
 ### JavaScript Bitwise Operators
 位元運算子把他們的運算元視為一組 0 or 1，對這些二進制表示法進行運算，並返回標準的 JavaScript 數值。
 
