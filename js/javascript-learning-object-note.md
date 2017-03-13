@@ -38,7 +38,7 @@ People.prototype.sayHi = function () {
     console.log("Hello, I'm "+this.name);
 };
 function Man(name, age) {
-    // 用自己本身 this 去呼叫父類別的建構子
+    // 用自己本身 this 去呼叫父類別的建構子，進而在自己的 this 去增加 name & age 兩種屬性
     People.call(this, name, age);
 }
 Man.prototype = new People();
@@ -50,15 +50,12 @@ var sean = new Man("Sean", 123);
 sean.sayHi(); 
 console.log("People'name: "+sean.name);
 console.log("People'age: "+sean.age);
+console.log(sean); // Man's Object
+console.log(Man.prototype); // People's Object
 
 ```
 
-notes: 看一下
-console.log(sean);
-console.log(Man.prototype);
-
-
-Notes:
+See more: 
 https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#繼承
 
 
