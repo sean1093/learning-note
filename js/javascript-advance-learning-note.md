@@ -32,6 +32,26 @@ See more: https://www.impressivewebs.com/callback-functions-javascript/
 
 ### Promise (ES6)
 從 ES6 之後才出現的，主要是可以避免層層 callback 造成所謂的 (callback hell)。
+//TODO
+basic promise example
+```js
+var promise = new Promise(function(resolve, reject) {
+
+    if (true) {
+        resolve("ok!");
+    }
+    else {
+        reject(Error("fail"));
+    } 
+});
+
+promise.then(function(result) {
+    console.log(result); // "ok!"
+}, function(err) {
+  console.log(err); // Error: "It broke"
+});
+
+```
 
 
 note: https://eyesofkids.gitbooks.io/javascript-start-es6-promise/content/
