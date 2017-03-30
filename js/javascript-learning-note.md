@@ -171,4 +171,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Op
 
 http://acm.nudt.edu.cn/~twcourse/BitwiseOperation.html
 
+* See more
+http://javascript.ruanyifeng.com/
+
+
 
