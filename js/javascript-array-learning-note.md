@@ -47,7 +47,7 @@ console.log(array); // ["Hello", "World"]
 ```
 
 * shift
-用於取出 Array 第一個一個值
+用於取出 Array 第一個值
 ```js
 var array = ["Hello", "World", "Hi"];
 var value = array.shift();
@@ -60,7 +60,6 @@ console.log(array); // ["World", "Hi"]
 排序
 ```js
 var array = [3,6,1,9,10,30];
-var array2 = [3,6,1,9,10,30];
 
 // 排序預設會按照第一個數字來排
 array.sort();

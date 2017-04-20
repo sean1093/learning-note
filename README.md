@@ -9,6 +9,7 @@ Here is something learning note about HTML, CSS or JavaScript.
 ### JavaScript
 #### [JavaScript Basic Knowledage Learning Note] 
 #### [JavaScript Object Learning Note] 
+#### [JavaScript Array Learning Note] 
 
 ### CSS
 #### [CSS Learning Note] 
@@ -24,6 +25,8 @@ Here is something learning note about HTML, CSS or JavaScript.
 [JavaScript Basic Knowledage Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-note.md>
 
 [JavaScript Object Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-object-note.md>
+
+[JavaScript Array Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-array-learning-note.md>
 
 [CSS Learning Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-learning-note.md>
 
