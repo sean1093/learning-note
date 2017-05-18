@@ -1,5 +1,16 @@
 # JavaScript Basic Knowledage Learning Note
 
+
+### Variable
+有三種宣告方式：
+* var (函式作用域(function scope))
+* const (ES6, 區塊作用域(block scope))
+常數宣告，不可改變的值
+* let (ES6, 區塊作用域(block scope))
+變數宣告，在for迴圈中每次都會重新綁定
+
+延伸閱讀：http://ithelp.ithome.com.tw/articles/10185142
+
 ### Number
 * String to Number
 ```js
@@ -16,20 +27,28 @@ parseInt("hihi", 10); //NaN
 ```
 
 * NaN
-    +  NaN + number = NaN
+NaN + number = NaN
 ```js
 NaN + 30 //NaN
 ```
 
-    + check NaN
+check NaN
+
 ```js
 isNaN(NaN) //true
+```
+
+* Max & Min
+可使用
+```js
+Number.MAX_VALUE
+Number.MIN_VALUE
 ```
 
 ### String
 * number to 2-digit string
 ```js
-var num = 5;
+let num = 5;
 num.toString(2); //"101"
 ```
 
@@ -51,22 +70,30 @@ num.toString(2); //"101"
 && / ||
 ```js
 //default value
-var name = UserName || "default";
+let name = UserName || "default";
 ```
+
+
+* sub string 
+取出子字串最佳的方法是使用 <code>slice</code>
+```js
+   str.slice(start[, end])
+```
+
 
 
 ### call by reference
 
 ```js
 //obj1 跟 obj2 不會相等
-var obj1 = {text: 'same'};
-var obj2 = {text: 'same'};
+let obj1 = {text: 'same'};
+let obj2 = {text: 'same'};
 console.log(obj1 == obj2); //false
 console.log(obj1 === obj2); //false
 
 //此時 obj1 跟 obj2 才會相等，因為他們參考同一個物件
-var obj1 = {text: 'same'};
-var obj2 = obj1;
+let obj1 = {text: 'same'};
+let obj2 = obj1;
 console.log(obj1 == obj2); //true
 console.log(obj1 === obj2); //true
 ```
@@ -74,8 +101,8 @@ console.log(obj1 === obj2); //true
 指定物件值的方法不同，會影響是使用 call by reference 或是 call by value
 ```js
 // call by reference
-var obj1 = {text: 'same'};
-var obj2 = obj1;
+let obj1 = {text: 'same'};
+let obj2 = obj1;
 obj1.text = 'change';
 
 console.log(obj1.text); //change
@@ -83,8 +110,8 @@ console.log(obj2.text); //change
 
 
 //假如用 object literal 的方式指定物件的值，那麼會是 call by value
-var obj1 = {text: 'same'};
-var obj2 = obj1;
+let obj1 = {text: 'same'};
+let obj2 = obj1;
 obj1 = {text: 'change'};
 
 console.log(obj1.text); //change
@@ -99,8 +126,8 @@ String, Number, Boolean, null, undefined
 
 Ex: 
 ```js
-var a1="Hello";
-var a2 = a1;
+let a1="Hello";
+let a2 = a1;
 a2 = "World";
 //此時a1還是"Hello"
 ```
@@ -111,8 +138,8 @@ Object(), Array(), Function(), Date(), Error(), RegExp()
 
 Ex:
 ```js
-var myObject={};
-var object2 = myObject;
+let myObject={};
+let object2 = myObject;
 object2.text = "Hello";
 //此時myObject跟object2都會有text = "Hello"這個屬性
 ```
@@ -144,6 +171,46 @@ it will console:
     5
     5
 */
+
+console.log("start");
+for(var i=0; i<5; i++){
+    var j = i;
+    setTimeout(function(){ 
+        console.log(j); 
+    }, 1);
+}
+console.log("end");
+
+/* 
+it will console:
+    start
+    end
+    4
+    4
+    4
+    4
+    4
+*/
+
+// 使用let來當告變數(ES6)
+console.log("start");
+for(let i=0; i<5; i++){
+    setTimeout(function(){ 
+        console.log(i); 
+    }, 1);
+}
+console.log("end");
+
+/* 
+it will console:
+    start
+    end
+    0
+    1
+    2
+    3
+    4
+*/
 ```
 
 ### JavaScript Bitwise Operators
@@ -153,12 +220,17 @@ it will console:
 * a & b (AND): 兩個都是1才等於1
 * a | b (OR): 只要其中一個或是兩者都為1就等於1
 * a ^ b (XOR): 其中一個是1才會回傳1，兩個都是1的話會回傳0
-* ~ a (NOT): 0->1, 1->0
+* ~ a (NOT): x -> -(x+1)
 
 Ex:
 * 15 & 9 = 9 (1111 & 1001 = 1001)
 * 15 | 9 = 15 (1111 | 1001 = 1111)
 * 15 ^ 9 = 6 (1111 ^ 1001 = 0110)
+* ~ 0 = -1
+* ~~ 3 = 3
+* ~~ null = 0
+* ~ true = -2 (true -> 1, ~1 = -2)
+* ~~ true = 1
 
 #### 位元位移運算子
 * 左移: a << b, 左移 a 的 b 位元，從右邊補 0。
