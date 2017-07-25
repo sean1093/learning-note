@@ -30,7 +30,7 @@ Here is something learning note about HTML, CSS or JavaScript.
 
 [JavaScript Array Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-array-learning-note.md>
 
-[JavaScript Function Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-function-learning-note.md>
+[JavaScript Function Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-function-note.md>
 
 [JavaScript Advance Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-advance-learning-note.md>
 
