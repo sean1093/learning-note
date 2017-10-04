@@ -31,9 +31,6 @@
 ```
 
 
-### DOM
-DOM: W3C所定義的文件物件模型 Document Object Module
-
 
 ### HTML target Attribute
 * _blank    : Opens the linked document in a new window or tab
@@ -48,4 +45,11 @@ Demo page: [target-demo]
 
 [target-demo]: <http://sean1093.github.io/demo/html-css-js/html-target-top.html>
 
+ 
+### DOM
+DOM: W3C所定義的文件物件模型 Document Object Module
 
+#### DOM 的效能
+DOM 操作的效能主要 bottleneck is DOM repaint。
+DOM 操作時常會伴隨 browser reflow，當DOM的內容變動，browser就需要持續去計算新的 layout 位置並 repaint
+參考：https://www.andyteki.com/programming/2017/03/08/dom-insertion-performance.html
