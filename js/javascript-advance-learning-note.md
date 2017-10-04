@@ -42,7 +42,7 @@ var promise = new Promise(function(resolve, reject) {
     }
     else {
         reject(Error("fail"));
-    } 
+    }
 });
 
 promise.then(function(result) {
@@ -59,7 +59,29 @@ note: https://eyesofkids.gitbooks.io/javascript-start-es6-promise/content/
 
 ### Arrow Function (ES6)
 
-// TODO
+這是 ES6 對於 function 的簡潔寫法
+
+```js
+() => {function內容}
+() => returnValue
+(變數) => {function內容}
+```
+
+假如 function 內直接 return，也可以寫成
+
+```js
+let add = (a, b) => a+b
+// 相當於
+let add = (a, b) => { return a+b; }
+```
+
+只有一個參數時，括號也可以不加
+
+```js
+let add = a => a+3
+```
+
+舉例來說
 
 ```js
 function a(key){ return key.length; }
@@ -71,4 +93,3 @@ console.log(b("aaa")); // 3
 var c = () => {console.log("hello");};
 c();
 ```
-

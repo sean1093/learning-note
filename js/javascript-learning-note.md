@@ -2,17 +2,22 @@
 
 
 ### Variable
+
 有三種宣告方式：
+
 * var (函式作用域(function scope))
-* const (ES6, 區塊作用域(block scope))
-常數宣告，不可改變的值
-* let (ES6, 區塊作用域(block scope))
-變數宣告，在for迴圈中每次都會重新綁定
+* const (ES6, 區塊作用域(block scope)): 常數宣告，不可改變的值
+* let (ES6, 區塊作用域(block scope)): 變數宣告，在for迴圈中每次都會重新綁定
+
+Let 只會在目前的 { } 內有效，而且重覆定義時會 throw Error 
+Const 只會在目前的 { } 內有效，定義時必須 initialize，而且不能更改
 
 延伸閱讀：http://ithelp.ithome.com.tw/articles/10185142
 
 ### Number
+
 * String to Number
+
 ```js
 //by 10-digit
 parseInt("123", 10) //123
@@ -21,13 +26,17 @@ parseInt("010", 10) //10
 //by 2-digit
 parseInt("11", 2); //3
 ```
+
 If input not number
+
 ```js
 parseInt("hihi", 10); //NaN
 ```
 
 * NaN
+
 NaN + number = NaN
+
 ```js
 NaN + 30 //NaN
 ```
@@ -39,22 +48,27 @@ isNaN(NaN) //true
 ```
 
 * Max & Min
+
 可使用
+
 ```js
 Number.MAX_VALUE
 Number.MIN_VALUE
 ```
 
 ### String
+
 * number to 2-digit string
+
 ```js
 let num = 5;
 num.toString(2); //"101"
 ```
 
-* operator 
+* operator
 
 +/-
+
 ```js
 "3" + 4 + 5    //"345"
 3 + 4 + "5"    //75
@@ -68,19 +82,19 @@ num.toString(2); //"101"
 ```
 
 && / ||
+
 ```js
 //default value
 let name = UserName || "default";
 ```
 
-
 * sub string 
+
 取出子字串最佳的方法是使用 <code>slice</code>
+
 ```js
    str.slice(start[, end])
 ```
-
-
 
 ### call by reference
 
@@ -99,6 +113,7 @@ console.log(obj1 === obj2); //true
 ```
 
 指定物件值的方法不同，會影響是使用 call by reference 或是 call by value
+
 ```js
 // call by reference
 let obj1 = {text: 'same'};
@@ -120,6 +135,7 @@ console.log(obj2.text); //same
 
 
 ### 原始值與複合值
+
 * 原始值
 String, Number, Boolean, null, undefined
 不是物件，儲存"值"
