@@ -161,13 +161,16 @@ object2.text = "Hello";
 ```
 
 ### null & undefined
+
 * undefined：未定義，代表缺少某個事物
 * null：目前無法使用某個會出現得值
-* 驗證 
+* 驗證
+
 null/undefined 的時候一定要用 ===，因為 == 無法分辨 null & undefined
 
 
 ### setTimeout
+
 ```js
 console.log("start");
 for(var i=0; i<5; i++){
