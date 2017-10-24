@@ -79,6 +79,9 @@ num.toString(2); //"101"
 "9" + 3        //"93"
 
 9 - "3" - "2"  //4
+
+"1.1" + "1.1" = "1.11.1"
+(+"1.1") + (+"1.1") = 2.2
 ```
 
 && / ||
@@ -167,6 +170,38 @@ object2.text = "Hello";
 * 驗證
 
 null/undefined 的時候一定要用 ===，因為 == 無法分辨 null & undefined
+
+```js
+null  == undefined // true
+null === undefined // false
+```
+
+null 與其他數值做相加減，會視為0
+
+```js
+let n = null;
+console.log(n * 100); // 0
+console.log(n + 100); // 100
+```
+
+### typeof
+
+這裡注意比較特別的是
+NaN 的 typeof = 'number'
+null 的 typeof = 'object'
+undefined 的 typeof = 'undefined'
+
+```js
+console.log(typeof 10)              //'number'
+console.log(typeof NaN)             //'number'
+console.log(typeof '')              //'string'
+console.log(typeof true)            //'boolean'
+console.log(typeof null)            //'object'
+console.log(typeof undefined)       //'undefined'
+console.log(typeof function(){})    //'function'
+console.log(typeof (typeof 10))     //'string'
+```
+
 
 
 ### setTimeout
@@ -261,6 +296,23 @@ Ex:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise_operators
 
 http://acm.nudt.edu.cn/~twcourse/BitwiseOperation.html
+
+
+
+### Scope
+
+```js
+if (true) {
+    let x = 5;
+}
+console.log(x); //5
+
+
+function a(){
+    let y = 11;
+}
+console.log(y) //Uncaught ReferenceError: y is not defined
+```
 
 * See more
 http://javascript.ruanyifeng.com/

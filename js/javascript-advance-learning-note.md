@@ -93,3 +93,21 @@ console.log(b("aaa")); // 3
 var c = () => {console.log("hello");};
 c();
 ```
+
+
+## Template strings
+
+ES6新增一個樣板字串的方式，可以讓串接字串與變數更加簡潔好懂
+
+```js
+const x = 10
+console.log(`10 + 5 = ${x + 5}`);
+// 10 + 5 = 15
+
+const name = 'Sean';
+console.log(`Hello ${name}!
+Hello world!`);
+
+// Hello Sean! Hello world!
+
+```
