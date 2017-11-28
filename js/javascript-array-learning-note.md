@@ -95,7 +95,7 @@ a.join(''); // 'ABC'
 
 * slice 用法
 
-與 String 的 slice 是一樣的，給予的兩個參數，開始的 index A，結束的 index B，子字串會位於 A ~ Ｂ-1
+與 String 的 slice 是一樣的，給予的兩個參數，開始的 index A，結束的 index B，子陣列會位於 A ~ Ｂ-1，最後 return 的子陣列是一份複製的，不會更動到原來的陣列。
 
 * splice 用法
 
@@ -106,6 +106,17 @@ a.join(''); // 'ABC'
 [4,6,8,3,9].splice(0,3) // [3, 9]
 
 [4,6,8,3,9].slice(3,2)  // [] ==> 因為 index 3~2 不是一個正確的區間
+[4,6,8,3,9].slice(0)    // [4,6,8,3,9] ==> 回傳一個複製的陣列
+
+const oldArray = [4,6,8,3,9,4,5,6]
+// 表示從 index 3 開始到 index 6 (不包含) ，return 複製切出來的子陣列
+const newArray = oldArray.slice(3,6)
+// array 不變
+console.log(oldArray)      // [4, 6, 8, 3, 9, 4, 5, 6]
+// return 複製切出來的子陣列
+console.log(newArray)    // [3, 9, 4]
+
+
 
 const array = [4,6,8,3,9,4,5,6]
 // 表示從 index 3 開始刪掉 2 個數，return 要刪除的部分
@@ -242,6 +253,19 @@ Array.prototype.reduce(
 [4,6,8,3,9].findIndex( (v) => v > 10 ) // -1
 [4,6,8,3,9].find( (v) => v > 10 )      // undefined
 ```
+
+
+## 相關技巧
+
+### copy array
+
+利用 slice 來達成複製
+
+```js
+[4,6,8,3,9].slice(0)    // [4,6,8,3,9] ==> 回傳一個複製的陣列
+```
+
+P.S. slice 細節可參考: https://github.com/sean1093/learning-note/blob/master/js/javascript-array-learning-note.md#slice--splice
 
 
 ## Data structure
