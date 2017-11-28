@@ -8,10 +8,13 @@
 
 ```js
 // 給予1個整數當作參數時，會被當作建立 Array 的大小
-const array_size = new Array(10);
+const array_size = new Array(10); // 一個長度為 10 的空 array
+
+// 但是如果是直接給予一個值，就會直接被當作 value
+const array_value1 = new Array('Hello'); // ['Hello']
 
 // 給予多個用逗號隔開的參數時，這些值會被當作 Array 的 value
-const array_value = new Array("Hello", "World");
+const array_value2 = new Array('Hello', 'World'); // ['Hello', 'World']
 ```
 
 ### attribute
@@ -32,6 +35,10 @@ console.log(array instanceof Array); //true
 
 
 ## function
+
+Array.prototye 中定義了很多方法
+
+![array-method](https://github.com/sean1093/learning-note/blob/master/img/array-method.png "array-method")
 
 以下為一些常用的重要 function
 
