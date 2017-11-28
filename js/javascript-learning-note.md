@@ -10,6 +10,7 @@
 * let (ES6, 區塊作用域(block scope)): 變數宣告，在for迴圈中每次都會重新綁定
 
 Let 只會在目前的 { } 內有效，而且重覆定義時會 throw Error 
+
 Const 只會在目前的 { } 內有效，定義時必須 initialize，而且不能更改
 
 延伸閱讀：http://ithelp.ithome.com.tw/articles/10185142
@@ -95,8 +96,14 @@ let name = UserName || "default";
 
 取出子字串最佳的方法是使用 <code>slice</code>
 
+給予的兩個參數，開始的 index A，結束的 index B，子字串會位於 A ~ Ｂ-1
+
 ```js
-   str.slice(start[, end])
+str.slice(start[, end])
+
+'abcde'.slice(0,3) //"abc"
+'abcde'.slice(1,3) //"bc"
+
 ```
 
 ### call by reference
@@ -141,6 +148,7 @@ console.log(obj2.text); //same
 
 * 原始值
 String, Number, Boolean, null, undefined
+
 不是物件，儲存"值"
 
 Ex: 
@@ -153,6 +161,7 @@ a2 = "World";
 
 * 複合值
 Object(), Array(), Function(), Date(), Error(), RegExp()
+
 由JavaScript物件構成，儲存"參考"
 
 Ex:
@@ -187,9 +196,9 @@ console.log(n + 100); // 100
 ### typeof
 
 這裡注意比較特別的是
-NaN 的 typeof = 'number'
-null 的 typeof = 'object'
-undefined 的 typeof = 'undefined'
+* NaN 的 typeof = 'number'
+* null 的 typeof = 'object'
+* undefined 的 typeof = 'undefined'
 
 ```js
 console.log(typeof 10)              //'number'
