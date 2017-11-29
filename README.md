@@ -21,6 +21,14 @@ Here is something learning note about HTML, CSS or JavaScript.
 ### Framework
 #### [Bootstarp Learning Note] 
 
+### 參考資料
+JavaScript 考題: http://ourjs.com/detail/52fb82e13bd19c4814000001
+https://mdluo.com/blog/about-front-end-interview/
+https://leohxj.gitbooks.io/front-end-database/interview/interview-exercises-with-JavaScript.html
+https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers
+https://gist.github.com/hanksudo/5873678
+http://hawx1993.github.io/Front-end-Interview-Questions/#/?id=interview-quesetions
+
 
 [HTML basic Learning Note]: <https://github.com/sean1093/learning-note/blob/master/html/html-learning-note.md>
 
