@@ -139,6 +139,42 @@ console.log(array) //[3, 9]
 
 ```
 
+### call & apply
+
+基本上 call 以及 apply 都是去執行這個 function 並將這個 function 的 context 替換成第一個參數帶入的物件。主要的不同點，call 可以接受一連串的參數，而 apply 則是接受array。call 的速度會比 apply 快一點點，但基本上是感覺不出來。
+
+舉例來說，我們有一個 changeInfo 的 function，利用傳入 obj 來把 changeInfo 中的 this 指向 obj
+
+```js
+function changeInfo(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+let obj = {
+    name: 'Sean',
+    age: '100'
+}
+
+console.log(obj);
+// {name: "Sean", age: "100"}
+
+// apply.(this, array)
+changeInfo.apply(obj, ['Tom', '200']);
+console.log(obj);
+// {name: "Tom", age: "200"}
+
+// call.(this, param1, param2, ...)
+changeInfo.call(obj, 'Tony', '300');
+console.log(obj);
+// {name: "Tony", age: "300"}
+
+// 假如傳入的參數不夠，就會自動帶上 undefined
+changeInfo.call(obj, 'Sean');
+console.log(obj);
+// {name: "Sean", age: undefined}
+```
+
 ### filter
 
 從 array 中找出回傳 true 的 element

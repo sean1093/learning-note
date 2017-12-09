@@ -146,10 +146,11 @@ console.log(obj2.text); //same
 
 ### 原始值與複合值
 
-* 原始值
+#### 原始值
+
 String, Number, Boolean, null, undefined
 
-不是物件，儲存"值"
+不是物件，儲存"值" (by value)，被稱作原始值的原因是他們已經無法再複雜了。
 
 Ex: 
 ```js
@@ -159,18 +160,54 @@ a2 = "World";
 //此時a1還是"Hello"
 ```
 
-* 複合值
-Object(), Array(), Function(), Date(), Error(), RegExp()
+#### 複合值
 
-由JavaScript物件構成，儲存"參考"
+Object(), Array(), Function(), Date(), Error(), RegExp(), Nunmber(), String(), Boolean()
+
+因為他們裡面可能會有一個或多個的原始值，像是物件，由 JavaScript 物件構成，儲存"參考" (by reference)。
 
 Ex:
+
 ```js
 let myObject={};
 let object2 = myObject;
 object2.text = "Hello";
 //此時myObject跟object2都會有text = "Hello"這個屬性
 ```
+
+#### 常見錯誤
+
+你沒有透過 new 去建構，就會被轉換為原始值，舉例來說:
+
+```js
+const st1 = String('st1');
+const st2 = new String('st2');
+console.log(typeof st1); // string
+console.log(typeof st2); // object
+```
+
+
+* 相同的原始值比較，不論 == 或是 === 都會是 true
+* 相同的複合值比較，不論 == 或是 === 都會是 false
+* 但如果是相同的原始值與複合值比較，== 會是 true ，但 === 因為記憶體位置不同會是 false
+
+以 string 來做比較: 
+
+```js
+'aaa' == 'aaa'
+true
+'aaa' === 'aaa'
+true
+new String('aaa') == 'aaa'
+true
+new String('aaa') === 'aaa'
+false
+new String('aaa') == new String('aaa')
+false
+new String('aaa') === new String('aaa')
+false
+```
+
 
 ### null & undefined
 
