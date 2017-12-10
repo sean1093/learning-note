@@ -360,6 +360,46 @@ function a(){
 console.log(y) //Uncaught ReferenceError: y is not defined
 ```
 
+
+
+### Hoisting
+
+> Hoisting is JavaScript's default behavior of moving declarations to the top. 
+> JavaScript Declarations are Hoisted
+> JavaScript Initializations are Not Hoisted
+> -- w3schools
+
+JavaScript中，它會把定義的變項移到最前面先執行。
+
+舉例來說，我們用兩種不同方式定義了 fun1 & fun2，其中 fun2 是用匿名 funtion 再指定到 fun2 變數，最後 console.log & 執行 fun1, fun2, fun3
+
+```js
+console.log(window.fun1); // 會印出 fun1
+console.log(window.fun2); // undefined
+console.log(window.fun3); // undefined
+fun1('fun1'); // fun1
+fun2('fun2'); // Uncaught ReferenceError: fun2 is not defined
+fun3('fun3'); // 不會執行，因為 fun2() 就已經先錯了，但如果他執行的話也是會顯示 Uncaught ReferenceError: fun3 is not defined
+
+function fun1(params) {
+    this.name = 'fun1';
+    console.log(this.name)
+}
+
+const fun2 = function (params) {
+    this.name = 'fun2';
+    console.log(this.name)
+}
+```
+
+原因是程式一開始執行的時候，就已經把 function fun1(){....} & const fun2 這些宣告(declare) 都先存到記憶體，但是還沒把 value 指定進去 fun2 當中，因此 fun2 才會是 undefined
+
+reference: https://pjchender.blogspot.tw/2015/12/javascript-hoisting.html
+
+
+
+
+
 * See more
 http://javascript.ruanyifeng.com/
 

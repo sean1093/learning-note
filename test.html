@@ -54,26 +54,25 @@ body {
 </div>
 <script>
 
-function changeInfo(name, age) {
-    this.name = name;
-    this.age = age;
+console.log(window.fun1);
+console.log(window.fun2);
+console.log(window.fun3);
+fun1('fun1');
+fun2('fun2');
+fun3('fun3');
+// console.log(typeof window.fun1);
+// console.log(typeof window.fun2);
+// console.log(window);
+
+function fun1(params) {
+    this.name = 'fun1';
+    console.log(this.name)
 }
 
-let obj = {
-    name: 'Sean',
-    age: '100'
+const fun2 = function (params) {
+    this.name = 'fun2';
+    console.log(this.name)
 }
-
-console.log(obj);
-
-changeInfo.apply(obj, ['Tom', '200']);
-console.log(obj);
-
-changeInfo.call(obj, 'Tony', '300');
-console.log(obj);
-
-changeInfo.call(obj, 'Sean');
-console.log(obj);
 
 </script>
 </body>
