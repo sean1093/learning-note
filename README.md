@@ -29,6 +29,7 @@ JavaScript 考題 & 觀念:
 * https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers
 * https://gist.github.com/hanksudo/5873678
 * http://hawx1993.github.io/Front-end-Interview-Questions/#/?id=interview-quesetions
+* http://javascript.ruanyifeng.com/
 
 
 [HTML basic Learning Note]: <https://github.com/sean1093/learning-note/blob/master/html/html-learning-note.md>

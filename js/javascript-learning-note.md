@@ -397,11 +397,28 @@ const fun2 = function (params) {
 reference: https://pjchender.blogspot.tw/2015/12/javascript-hoisting.html
 
 
+### Regular Expressions
 
+可以使用兩種方式來呼叫， RegExp 常數 /  RegExp 物件
 
+* RegExp 常數
 
-* See more
-http://javascript.ruanyifeng.com/
+擁有較佳性能
+
+```js
+const regexp = /ab+c/;
+```
+
+* RegExp 物件
+
+適用於模式會異動、事先未知匹配模式
+
+```js
+const regexp = new RegExp('ab+c');
+```
+
+reference: https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
+
 
 
 
