@@ -333,6 +333,7 @@ Ex:
 * ~~ true = 1
 
 #### 位元位移運算子
+
 * 左移: a << b, 左移 a 的 b 位元，從右邊補 0。
 * 維持符號右移: a >> b, 右移 a 的 b 位元，丟棄移出的位元。
 * 填 0 右移: a >>> b, 右移 a 的 b 位元，丟棄移出的位元，並從左邊補 0。
@@ -365,8 +366,11 @@ console.log(y) //Uncaught ReferenceError: y is not defined
 ### Hoisting
 
 > Hoisting is JavaScript's default behavior of moving declarations to the top. 
+>
 > JavaScript Declarations are Hoisted
+>
 > JavaScript Initializations are Not Hoisted
+>
 > -- w3schools
 
 JavaScript中，它會把定義的變項移到最前面先執行。
