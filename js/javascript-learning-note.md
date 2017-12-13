@@ -373,7 +373,7 @@ console.log(y) //Uncaught ReferenceError: y is not defined
 >
 > -- w3schools
 
-JavaScript中，它會把定義的變項移到最前面先執行。
+JavaScript中，它會把定義的變項移到最前面先執行。 但要注意 Hoisting 只針對宣告部分，對於變數的指定，並沒有跟著被提升。
 
 舉例來說，我們用兩種不同方式定義了 fun1 & fun2，其中 fun2 是用匿名 funtion 再指定到 fun2 變數，最後 console.log & 執行 fun1, fun2, fun3
 

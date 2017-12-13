@@ -5,7 +5,37 @@
 HTML5更加語義化，使用有意義的tag來取代佈滿沒有意義的div
 Ex: footer, nav
 
-## viewport 
+### script tag
+
+HTML 5 新增了 defer & async 兩種新屬性
+
+#### normal
+
+一般情況的用法，遇到 script tag 時，web render 會停止，等 test.js 下載並且執行完，才會繼續執行下面的 HTML
+
+```html
+<script src="test.js" ></script>
+```
+
+#### defer
+
+遇到 script tag 時，web render 不會停止，test.js 會在背景下載，等 DOMContentLoaded 再執行 test.js
+
+```html
+<script src="test.js" defer ></script>
+```
+
+遇到 script tag 時，web render 不會停止，test.js 會在背景下載
+
+當 test.js 一下載完畢，會先停止 web render，並且執行 test.js
+
+當 test.js 執行完畢，web render 才會繼續
+
+```html
+<script src="test.js" async ></script>
+```
+
+## viewport
 
 簡單說是畫面可看到的範圍，分為兩種：
 
@@ -73,5 +103,9 @@ DOM: W3C所定義的文件物件模型 Document Object Module
 ### DOM 的效能
 
 DOM 操作的效能主要 bottleneck is DOM repaint。
+
 DOM 操作時常會伴隨 browser reflow，當DOM的內容變動，browser就需要持續去計算新的 layout 位置並 repaint
+
 參考：https://www.andyteki.com/programming/2017/03/08/dom-insertion-performance.html
+
+
