@@ -49,19 +49,16 @@ a.call(null);
 // windows object
 ```
 
-
-
-
-
-
-
-
-
-
-
-
+5.
 
 ```js
-
+["1", "2", "3"].map(parseInt);
+// [1, NaN, NaN]
+["1", "2", "3"].map((i) => parseInt(i));
+// [1, 2, 3]
 ```
 
+詳細解釋: http://blog.csdn.net/justjavac/article/details/19473199
+
+
+6.
