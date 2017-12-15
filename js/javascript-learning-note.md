@@ -246,8 +246,13 @@ console.log(typeof null)            //'object'
 console.log(typeof undefined)       //'undefined'
 console.log(typeof function(){})    //'function'
 console.log(typeof (typeof 10))     //'string'
+console.log(typeof new Date())      //'object'
 ```
+除了基本資料型態以外都是回傳 'object'
 
+function 會回傳 'function'
+
+還有個例外是 undefined 會回傳 'undefined'
 
 
 ### setTimeout

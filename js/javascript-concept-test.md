@@ -84,7 +84,59 @@ fs[2](); // 3
 詳細解釋: https://pjchender.blogspot.tw/2016/05/javascriptclosure.html
 
 
+7.
+
+```js
+function foo(){
+    return this;
+}
+console.log( foo.call( foo ) )
+// ƒ foo(){
+//   return this;
+//}
+```
+
+8.
 
 
+```js
+(function() {
+	var a = b = 5;
+})();
+ 
+console.log(b); // 5
+```
 
+如果使用了 strict mode ，這種情況下就會報錯
 
+```js
+(function() {
+   'use strict'
+	var a = b = 5;
+})();
+ 
+console.log(b); // Uncaught ReferenceError: b is not defined
+```
+
+9.
+
+JavaScript 中 this 所引用的是函數上下文，取決於函數是怎麼被使用，而不是他定義的時候
+
+```js
+var fullname = 'A';
+var obj = {
+    fullname: 'B',
+    prop: {
+        fullname: 'C',
+        getFullname: function() {
+            return this.fullname;
+        }
+    }
+};
+ 
+console.log(obj.prop.getFullname()); // C
+ 
+var test = obj.prop.getFullname;
+ 
+console.log(test()); // A
+```
