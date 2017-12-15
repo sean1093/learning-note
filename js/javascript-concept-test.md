@@ -62,3 +62,29 @@ a.call(null);
 
 
 6.
+
+```js
+function buildFunctions(){ 
+    var arr = [];
+    for(var i = 0; i < 3; i++){
+        arr.push(
+            function(){
+                console.log(i);
+            }
+        )
+    }
+    return arr;
+}
+var fs = buildFunctions();
+fs[0](); // 3
+fs[1](); // 3
+fs[2](); // 3
+```
+
+詳細解釋: https://pjchender.blogspot.tw/2016/05/javascriptclosure.html
+
+
+
+
+
+

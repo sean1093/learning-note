@@ -348,18 +348,52 @@ http://acm.nudt.edu.cn/~twcourse/BitwiseOperation.html
 
 ### Scope
 
+if / for 的 scope 跟 function 是不一樣的
+
 ```js
 if (true) {
     let x = 5;
 }
-console.log(x); //5
-
+console.log(x); // 5
 
 function a(){
     let y = 11;
 }
-console.log(y) //Uncaught ReferenceError: y is not defined
+console.log(y) // Uncaught ReferenceError: y is not defined
+
+
+for(let i=1; i<5; i++){
+}
+console.log(i) // 5
+
+
+// 如果使用 let，就會有錯誤，因為 let 只會在目前的 { } 內有效
+for(let j=1; j<5; j++){
+}
+console.log(j) // Uncaught ReferenceError: j is not defined
 ```
+
+### Closure
+
+Closure 是一種資料結構，包含函式以及記住函式被建立時當下環境，也就是內部函式能透過記憶體位置(使用 refer)，存取得到的作用域連鎖中的所有變數當下的值
+
+function 中的 function 是一種最常見的 closure
+
+```js
+function plus(x){
+    function inner(){
+        console.log(x++);
+    }
+    return inner
+}
+
+const func = plus(1)
+func() // 1
+func() // 2
+func() // 3
+```
+
+
 
 
 
