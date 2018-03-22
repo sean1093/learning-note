@@ -67,6 +67,8 @@ Width = width(包含padding-left + padding-right + border-left + border-right)
 
 寬高由內容決定，與其他元素共處一行。常用的行內元素如 a, span 等等。
 
+display : inline 的 HTML 元素可以有 margin-left 、 margin-right 、 padding-left 、 padding-right ，但不能有 margin-top 、 margin-bottom 、 padding-top 、 padding-bottom 、 width 、 height 、 background-image 
+
 ### none
 
 這個屬性可以使得 DOM 元素不會出現在畫面上也不會佔有空間。最常拿來與 visibility: hidden; 比較，visibility: hidden 也不會出現在畫面上但是會保留元素原始空間。
@@ -75,6 +77,8 @@ Width = width(包含padding-left + padding-right + border-left + border-right)
 ### inline-block
 
 寬可以自行設定，與其他元素共處一行，常用於垂直置中。
+
+碰到 display : inline-block 元素不會換行，但是又可以設定 padding-top 、 padding-bottom 、 width 、 height 、 background-image
 
 
 ## position
