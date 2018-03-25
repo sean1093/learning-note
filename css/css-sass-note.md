@@ -49,3 +49,6 @@ span {
     font-size: 12px;
 }
 ```
+
+// http://eddychang.me/blog/others/91-scss-15-mins.html
+// https://blog.kdchang.cc/2016/10/11/sass-scss-tutorial-introduction/

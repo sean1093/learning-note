@@ -141,19 +141,19 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
             <td>選取所有的 < div > & < p ></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>element element</td>
+            <td>div p</td>
+            <td>選取所有在 < div > 裡面的 < p ></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>[attribute=value]</td>
+            <td>[target=_blank]</td>
+            <td>選取元素屬性等於特定值</td>
         </tr>
     </tbody>
 </table>
 
-
+其餘可參考: https://www.w3schools.com/cssref/css_selectors.asp
 
 
 ## 常見操作
@@ -190,17 +190,21 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
 單冒號 (:) 是用在偽類
 雙冒號 (::) 則是用在偽元素
 
-###
+### 偽類
 
-> A pseudo-class is used to define a special state of an element.
+>A pseudo-class is used to define a special state of an element.
 > 
-> For example, it can be used to:
+>For example, it can be used to:
 > 
-> Style an element when a user mouses over it
-> Style visited and unvisited links differently
-> Style an element when it gets focus
 >
-> from w3schools
+>Style an element when a user mouses over it
+>
+>Style visited and unvisited links differently
+>
+>Style an element when it gets focus
+>
+>
+>... from w3schools
 
 偽類是用來描述 element 的狀態，自己理解是認為這個狀態並不存在 DOM 裡面，所以被稱作 "偽"。要注意的是每一個 selector 只能使用一個偽元素
 
@@ -221,5 +225,49 @@ div:hover p {
 ```
 
 
+### 偽元素
+
+>A CSS pseudo-element is used to style specified parts of an element.
+>
+>
+>For example, it can be used to:
+>
+>Style the first letter, or line, of an element
+>
+>Insert content before, or after, the content of an element
+>
+>
+>... from w3schools
+
+
+簡單說，偽元素並不是真正 DOM element，但行為與表現又和 DOM element一樣，也可以對其使用 CSS 操控。
+
+常見的有 ::before、::after、::first-line、::first-letter & ::selection
+
+舉例來說，::before、::after 是最常使用的偽元素，兩者都是以 <code>display:inline-block</code> 的屬性存在，::before 是在原本的元素「之前」加入內容，::after 則是在原本的元素「之後」加入內容，同時偽元素也會「繼承」原本元素的屬性。
+
+```css
+selector::pseudo-element {
+    property:value;
+}
+```
+
+舉個例子
+
+這個會在 div 之前加上 content 的內容，也就是加上了本來 dom 不存在的偽元素，並且可以有著跟 element 一樣行為，像是設定它的顏色為紅色
+```css
+div::before{
+    content:"add before";
+    color: red;
+}
+```
+
+這會把 p 文字的第一行變紅色
+
+```css
+p::first-line {
+    color: red;
+}
+```
 
 
