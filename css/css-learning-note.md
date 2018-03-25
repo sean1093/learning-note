@@ -106,6 +106,25 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
 
 常用的幾種selector方式如下：
 
+<table>
+    <thead>
+        <tr>
+            <th>Selector</th>
+            <th>Example</th>
+            <th>Description</th>          
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>.class</td>
+            <td>.hello</td>
+            <td>選取 all elements with class="hello"</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
 
 ## 常見操作
 
@@ -132,6 +151,44 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
 ```
 
 ### 垂直置中
+
+//TODO
+
+
+## 偽類 (pseudo class) 和偽元素 (pseudo element)
+
+單冒號 (:) 是用在偽類
+雙冒號 (::) 則是用在偽元素
+
+###
+
+> A pseudo-class is used to define a special state of an element.
+> 
+> For example, it can be used to:
+> 
+>> Style an element when a user mouses over it
+>> Style visited and unvisited links differently
+>> Style an element when it gets focus
+>
+> from w3schools
+
+偽類是用來描述 element 的狀態，自己理解是認為這個狀態並不存在 DOM 裡面，所以被稱作 "偽"。要注意的是每一個 selector 只能使用一個偽元素
+
+例如 
+
+div:hover p ，使用 :hover 偽類到一個 div 上，使得在發生 hover 的時候套用到 div 下所有的 p element，產生 tooltip 的效果
+
+```css
+p {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+
+div:hover p {
+    display: block;
+}
+```
 
 
 
