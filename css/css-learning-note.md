@@ -120,6 +120,36 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
             <td>.hello</td>
             <td>選取 all elements with class="hello"</td>
         </tr>
+        <tr>
+            <td>#id</td>
+            <td>#login</td>
+            <td>選取 the elements with id="login"</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>.hello</td>
+            <td>選取 all elements</td>
+        </tr>
+        <tr>
+            <td>element</td>
+            <td>p</td>
+            <td>選取所有的 < p > </td>
+        </tr>
+        <tr>
+            <td>element,element</td>
+            <td>div, p</td>
+            <td>選取所有的 < div > & < p ></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -166,9 +196,9 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
 > 
 > For example, it can be used to:
 > 
->> Style an element when a user mouses over it
->> Style visited and unvisited links differently
->> Style an element when it gets focus
+> Style an element when a user mouses over it
+> Style visited and unvisited links differently
+> Style an element when it gets focus
 >
 > from w3schools
 
