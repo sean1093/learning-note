@@ -32,6 +32,9 @@ JavaScript 考題 & 觀念:
 * http://hawx1993.github.io/Front-end-Interview-Questions/#/?id=interview-quesetions
 * http://javascript.ruanyifeng.com/
 
+Git 學習
+* https://backlog.com/git-tutorial/tw/
+
 
 [HTML basic Learning Note]: <https://github.com/sean1093/learning-note/blob/master/html/html-learning-note.md>
 
