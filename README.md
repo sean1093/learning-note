@@ -17,6 +17,7 @@ Here is something learning note about HTML, CSS or JavaScript.
 #### [CSS Learning Note] 
 #### [CSS Animation Learning Note]
 #### [CSS RWD Note]  
+#### [SCSS Note]
 
 ### Framework
 #### [Bootstarp Learning Note] 
@@ -38,7 +39,7 @@ JavaScript 考題 & 觀念:
 
 [JavaScript Object Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-object-note.md>
 
-[JavaScript Array Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-array-learning-note.md>
+[JavaScript Array Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-array-note.md>
 
 [JavaScript Function Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-function-note.md>
 
@@ -49,5 +50,7 @@ JavaScript 考題 & 觀念:
 [CSS Animation Learning Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-animation-note.md>
 
 [CSS RWD Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-rwd-note.md>
+
+[SCSS Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-sass-note.md>
 
 [Bootstarp Learning Note]: <https://github.com/sean1093/learning-note/blob/master/framework/bootstrap-learning-note.md>
