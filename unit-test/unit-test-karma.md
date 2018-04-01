@@ -2,6 +2,8 @@
 
 使用 karma 與 jasmine 
 
+sample: https://github.com/sean1093/learning-note/tree/master/sample/unit-test/karma
+
 ## 安裝步驟
 
 ```sh
@@ -67,8 +69,8 @@ describe("A suite of basic functions", function() {
 
 * success
 
-![success](https://github.com/sean1093/learning-note/blob/master/UnitTest/image/success.png "success")
+![success](https://github.com/sean1093/learning-note/blob/master/img/unit-karma-success.png "success")
 
 * failed
 
-![failed](https://github.com/sean1093/learning-note/blob/master/UnitTest/image/failed.png "failed")
+![failed](https://github.com/sean1093/learning-note/blob/master/img/unit-karma-failed.png "failed")
