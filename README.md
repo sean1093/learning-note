@@ -34,6 +34,9 @@ Here is something learning note about HTML, CSS or JavaScript.
 #### [React basic Learning Note]
 #### [Redux Learning Note]
 
+### Others
+#### [Git Learning Note]
+
 ### 參考資料
 JavaScript 考題 & 觀念: 
 * http://ourjs.com/detail/52fb82e13bd19c4814000001
@@ -72,3 +75,5 @@ Git 學習
 
 [React basic Learning Note]: <https://github.com/sean1093/react-starter/blob/master/react-notes.md>
 [Redux Learning Note]: <https://github.com/sean1093/react-starter/blob/master/redux-notes.md>
+
+[Git Learning Note]: <https://github.com/sean1093/learning-note/blob/master/others/git-learning-notes.md>
