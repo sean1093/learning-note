@@ -1,8 +1,7 @@
 # Git Learning Notes
 
-## 常用指令
 
-### 新增或修改檔案
+## 新增或修改檔案
 
 新增的檔案 -> Untracked files
 改動過的檔案 -> Changes not staged for commit
@@ -22,9 +21,24 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
+## 常用指令
+
+
+### git status
+
+最常使用來查看當前狀態
+
+```zsh
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
+
 ### git add .
 
-Changes to be committed，也可以使用 <code>git add < file name ></code>
+新增檔案到 Changes to be committed，也可以使用 <code>git add < file name ></code>
 
 ```zsh
 On branch master
@@ -39,7 +53,7 @@ Changes to be committed:
 
 ### git commit
 
-建立一個commit (Your branch is ahead of 'origin/master' by 1 commit.)
+建立一個 commit (Your branch is ahead of 'origin/master' by 1 commit.)
 
 ```zsh
 $ git commit -m 'update note'
@@ -82,6 +96,34 @@ To github.com:sean1093/learning-note.git
    213a81d..44bbba3  master -> master
 ```
 
+### git stash
+
+當你有一些修改還不想 commit 但卻要切 branch 的時候，可以使用 stash 來暫存狀態
+
+```zsh
+$ git stash
+Saved working directory and index state WIP on master: 3cff597 update git learning notes
+```
+
+查看所有 stash list
+
+```zsh
+$ git stash list
+stash@{0}: WIP on master: 3cff597 update git learning notes
+```
+
+要套用回來的時候，使用 apply 指令，會預設使用 stash 中最新的一筆
+```zsh
+$ git stash apply
+```
+
+或是也可以指定某一個 stash
+
+```zsh
+$ git stash apply stash@{0}
+```
+
+
 ### branch 相關
 
 #### 直接建立一個新的 branch
@@ -111,17 +153,6 @@ $ git checkout -b [BranchName]
 $ git branch -d [BranchName]
 ```
 
-
-### git status
-
-```zsh
-$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-
-nothing to commit, working tree clean
-```
-
 ### git log
 
 可以查看 log
@@ -137,16 +168,43 @@ Date:   Sat Apr 7 11:18:04 2018 +0800
     ...  
 ```
 
+### 合併
 
-### git merge
+當從 master 拉出新的 feature branch 或是 bugfix branch 的時候
 
-用於合併兩個 branch，但注意合併時用 git merge [另一個分支] 來將另一個分支的變更合併回來，比如說要把一個 new_feature merge 回 master，就必須要先到 master branch，然後才去下 git merge new_feature
+#### git merge
+
+用於合併兩個 branch，但注意合併時用 git merge [另一個分支] 來將另一個分支的變更合併回來，比如說要把一個 new_feature merge 回 master，就必須要先到 master branch，然後才去下 <code>git merge new_feature</code>
+
+```zsh
+$ git merge [BranchName]
+```
+
+### git rebase
+
+可以將新的 branch 合併回 master，master 的 HEAD 會移動到 new branch 的 HEAD 這裡
+
+
+可參考: https://backlog.com/git-tutorial/tw/stepup/stepup1_4.html
+
+
+## 回復
+
+TODO
+
+### git revert
+
+### git cherry-pick
+
+
+
+
 
 ## 其他操作
 
 ### git reflog
 
-可找回每次動作的 SHA，以方便做回複
+可找回每次動作的 SHA，以方便做回復
 
 ```zsh
 $ git reflog
