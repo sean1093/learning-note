@@ -85,13 +85,6 @@ num.toString(2); //"101"
 (+"1.1") + (+"1.1") = 2.2
 ```
 
-&& / ||
-
-```js
-//default value
-let name = UserName || "default";
-```
-
 * sub string 
 
 取出子字串最佳的方法是使用 <code>slice</code>
@@ -458,6 +451,13 @@ const regexp = /ab+c/;
 
 ```js
 const regexp = new RegExp('ab+c');
+```
+
+reference: https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
+
+
+
+
 ```
 
 reference: https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
