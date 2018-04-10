@@ -112,9 +112,14 @@ $ git stash list
 stash@{0}: WIP on master: 3cff597 update git learning notes
 ```
 
-要套用回來的時候，使用 apply 指令，會預設使用 stash 中最新的一筆
+要套用回來的時候，使用 apply / pop 指令，會預設使用 stash 中最新的一筆
+
+* apply: 套用之後還會保留這筆 stash
+* pop: 套用之後會刪除這筆 stash
+
 ```zsh
 $ git stash apply
+$ git stash pop
 ```
 
 或是也可以指定某一個 stash
