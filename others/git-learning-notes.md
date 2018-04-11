@@ -150,6 +150,12 @@ $ git checkout [BranchName]
 $ git checkout -b [BranchName]
 ```
 
+#### 查看 loacl branch 與他的 remote branch
+
+```zsh
+$ git branch -vv 
+```
+
 #### 刪除 branch
 
 不能刪除目前工作目錄所指定的 branch，必須先切換到其他 branch，再刪除目前這個 branch
