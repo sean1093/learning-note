@@ -40,6 +40,58 @@
 
 其中，要注意如果重複加載 style 優先度為 Inline > Embedding > External
 
+
+## css specificity (權重)
+
+基本的權重大小
+
+<code>!important > inline style > ID > Class/psuedo-class(偽類)/attribute（屬性選擇器） > Element > *</code>
+
+<table>
+    <thead>
+        <tr>
+            <th>Selector</th>
+            <th>Example</th>
+            <th>Specificity</th>          
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>全站預設值</td>
+            <td>*</td>
+            <td>0,0,0,1</td>
+        </tr>
+        <tr>
+            <td>element</td>
+            <td>p</td>
+            <td>0,0,1,0</td>
+        </tr>
+        <tr>
+            <td>element,element</td>
+            <td>div, p</td>
+            <td>0,0,2,0</td>
+        </tr>
+        <tr>
+            <td>#id</td>
+            <td>#login</td>
+            <td>0,1,0,0</td>
+        </tr>
+        <tr>
+            <td>#id,element</td>
+            <td>#login, p</td>
+            <td>0,1,1,0</td>
+        </tr>
+        <tr>
+            <td>inline style attribute</td>
+            <td>div style="color:red"</td>
+            <td>1,0,0,0</td>
+        </tr>
+    </tbody>
+</table>
+
+See more: https://ithelp.ithome.com.tw/articles/10196454
+
+
 ## box model
 
 決定元素大小的呈現方式，設定值有以下三種: content-box(預設值)、border-box 及 padding-box。
@@ -146,6 +198,11 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
             <td>選取所有在 < div > 裡面的 < p ></td>
         </tr>
         <tr>
+            <td>element > element</td>
+            <td>div > p</td>
+            <td>選取所有 parent 是 < div > 的 < p > </td>
+        </tr>
+        <tr>
             <td>[attribute=value]</td>
             <td>[target=_blank]</td>
             <td>選取元素屬性等於特定值</td>
@@ -188,20 +245,21 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
 ## 偽類 (pseudo class) 和偽元素 (pseudo element)
 
 單冒號 (:) 是用在偽類
+
 雙冒號 (::) 則是用在偽元素
 
 ### 偽類
 
->A pseudo-class is used to define a special state of an element.
+> A pseudo-class is used to define a special state of an element.
 > 
->For example, it can be used to:
+> For example, it can be used to:
 > 
 >
->Style an element when a user mouses over it
+> Style an element when a user mouses over it
 >
->Style visited and unvisited links differently
+> Style visited and unvisited links differently
 >
->Style an element when it gets focus
+> Style an element when it gets focus
 >
 >
 >... from w3schools
@@ -227,17 +285,17 @@ div:hover p {
 
 ### 偽元素
 
->A CSS pseudo-element is used to style specified parts of an element.
+> A CSS pseudo-element is used to style specified parts of an element.
 >
 >
->For example, it can be used to:
+> For example, it can be used to:
 >
->Style the first letter, or line, of an element
+> Style the first letter, or line, of an element
 >
->Insert content before, or after, the content of an element
+> Insert content before, or after, the content of an element
 >
 >
->... from w3schools
+> ... from w3schools
 
 
 簡單說，偽元素並不是真正 DOM element，但行為與表現又和 DOM element一樣，也可以對其使用 CSS 操控。
@@ -255,6 +313,7 @@ selector::pseudo-element {
 舉個例子
 
 這個會在 div 之前加上 content 的內容，也就是加上了本來 dom 不存在的偽元素，並且可以有著跟 element 一樣行為，像是設定它的顏色為紅色
+
 ```css
 div::before{
     content:"add before";
