@@ -240,6 +240,11 @@ absolute 屬性的元素，是定位是在他所處上層容器的相對位置�
 ### 垂直置中
 
 //TODO
+http://www.oxxostudio.tw/articles/201502/css-vertical-align-7methods.html
+
+### transform & transition
+
+// https://segmentfault.com/a/1190000004460780
 
 
 ## 偽類 (pseudo class) 和偽元素 (pseudo element)
