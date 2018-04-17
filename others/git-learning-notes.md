@@ -191,23 +191,51 @@ Date:   Sat Apr 7 11:18:04 2018 +0800
 $ git merge [BranchName]
 ```
 
-### git rebase
+#### git rebase
 
-可以將新的 branch 合併回 master，master 的 HEAD 會移動到 new branch 的 HEAD 這裡
+可以將新的 branch 合併回 master，master 的 HEAD 會移動到 new branch 的 HEAD 這裡。使用 rebase 的話會影響到歷史紀錄。
 
 
-可參考: https://backlog.com/git-tutorial/tw/stepup/stepup1_4.html
+可參考: 
+
+https://backlog.com/git-tutorial/tw/stepup/stepup1_4.html
+
+https://gitbook.tw/chapters/branch/merge-with-rebase.html
 
 
 ## 回復
 
-TODO
-
 ### git revert
+
+> 新增一個 Commit 來反轉（或說取消）另一個 Commit 的內容，原本的 Commit 依舊還是會保留在歷史紀錄中。雖然會因此而增加 Commit 數，但通常比較適用於已經推出去的 Commit，或是不允許使用 Reset 或 Rebase 之修改歷史紀錄的指令的場合。
+>
+> https://gitbook.tw/chapters/rewrite-history/reset-revert-and-rebase.html
+
+
 
 ### git cherry-pick
 
+只撿某些 Commit 來用
 
+先使用 git log 來列出所有的 commit
+
+```zsh
+$ git log --oneline
+72c2388 (HEAD -> master, origin/master, origin/HEAD) update notes
+6afe45e update css notes
+d23426d update git notes
+45f049f update git learning notes
+d20b007 update javascript notes
+589dac7 update git learning notes
+3cff597 update git learning notes
+394f125 update readme
+```
+
+再使用 cherry-pick {...SHA} 撿回來使用
+
+```zsh
+git cherry-pick 72c2388 d23426d 589dac7
+```
 
 
 
@@ -240,6 +268,7 @@ f8a333e HEAD@{8}: pull: Fast-forward
 
 ## Reference
 
+* https://gitbook.tw/
 * https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/README.md
 
 
