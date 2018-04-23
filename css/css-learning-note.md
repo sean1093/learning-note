@@ -132,6 +132,10 @@ display : inline 的 HTML 元素可以有 margin-left 、 margin-right 、 paddi
 
 碰到 display : inline-block 元素不會換行，但是又可以設定 padding-top 、 padding-bottom 、 width 、 height 、 background-image
 
+### Flex
+
+http://www.oxxostudio.tw/articles/201501/css-flexbox.html
+
 
 ## position
 
