@@ -46,6 +46,7 @@ JavaScript 考題 & 觀念:
 * https://gist.github.com/hanksudo/5873678
 * http://hawx1993.github.io/Front-end-Interview-Questions/#/?id=interview-quesetions
 * http://javascript.ruanyifeng.com/
+* https://legacy.gitbook.com/book/llh911001/mostly-adequate-guide-chinese/details
 
 Git 學習
 * https://backlog.com/git-tutorial/tw/
