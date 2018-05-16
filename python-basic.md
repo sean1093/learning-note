@@ -45,6 +45,7 @@ print('a now:', a)   # 20
 
 ## scope & LEGB
 
+https://segmentfault.com/a/1190000000640834
 
 ## reference
 * http://www.runoob.com/python3/python3-tutorial.html
