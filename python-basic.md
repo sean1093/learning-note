@@ -1,11 +1,23 @@
 
-# def
+
+# function
+
+一些小的運算任務你可以使用 lambda，而較複雜的邏輯你可以使用 def 來定義
+
+## def
 
 使用 def 定義函數
 
 ```py
 def function_name(parameters):
     expressions
+```
+
+## lambda
+
+```py
+function_name = lambda arg1, arg2, ...: expression
+print(function_name(10, 3))
 ```
 
 # global
