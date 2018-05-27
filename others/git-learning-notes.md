@@ -113,6 +113,19 @@ Unstaged changes after reset:
 M       others/tool-notes.md
 ```
 
+### git pull
+
+抓取遠端的資料下來
+
+```zsh
+$ git pull origin master
+```
+
+* notes:
+  + git pull = git fetch + git merge 
+  + git pull --rebase = git fetch + git 
+
+
 ### git push origin master 
 
 push commit to master branch
@@ -297,6 +310,13 @@ f8a333e HEAD@{8}: pull: Fast-forward
 6c0dd65 HEAD@{15}: reset: moving to HEAD~
 4db1183 HEAD@{16}: commit: update
 ```
+
+## Pull Request
+
+詳見另一章節: 
+
+https://github.com/sean1093/learning-note/blob/develop/others/git-pull-request-notes.md
+
 
 ## Reference
 
