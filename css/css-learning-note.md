@@ -107,6 +107,7 @@ Width = width(包含padding-left + padding-right) + border-left + border-right
 border-box
 Width = width(包含padding-left + padding-right + border-left + border-right)
 
+
 ## display
 
 每一個元素都有他的display屬性，包含 block、inline 與inline-block...等等，CSS3更新增了 flex
@@ -134,7 +135,7 @@ display : inline 的 HTML 元素可以有 margin-left 、 margin-right 、 paddi
 
 ### Flex
 
-http://www.oxxostudio.tw/articles/201501/css-flexbox.html
+2009年，W3C 提出的新 display 方式，詳見:
 
 
 ## position
