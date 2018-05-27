@@ -16,7 +16,12 @@ id = 100
 counter = 100.5
 ```
 
-## def
+
+## function
+
+一些小的運算任務你可以使用 lambda，而較複雜的邏輯你可以使用 def 來定義
+
+### def
 
 使用 def 定義函數
 
@@ -25,7 +30,13 @@ def function_name(parameters):
     expressions
 ```
 
-## global
+### lambda
+
+```py
+function_name = lambda arg1, arg2, ...: expression
+print(function_name(10, 3))
+```
+
 
 如果在 function 中宣告了 global，就可以使用並且修改 global 的值
 
