@@ -23,5 +23,16 @@ Disable the Client-Side (Implicit) OAuth flow for web apps. If you check this op
 
 
 
+user info:
+https://api.instagram.com/v1/users/self/?access_token={ACCESS-TOKEN}
+
+https://api.instagram.com/v1/users/self/media/recent/?access_token={ACCESS-TOKEN}
+
+
+https://api.instagram.com/v1/locations/{location-id}?access_token=ACCESS-TOKEN
+
+
+
+
 
 
