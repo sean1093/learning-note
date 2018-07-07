@@ -1,11 +1,10 @@
 # Framing
 
-## Supervised Learning
-
 Course link: https://developers.google.com/machine-learning/crash-course/framing/ml-terminology
 
-> ML systems learn how to combine input to produce useful predictions on never-before-seen data.
+## Supervised Learning
 
+> ML systems learn how to combine input to produce useful predictions on never-before-seen data.
 
 ## Features and Labels
 
