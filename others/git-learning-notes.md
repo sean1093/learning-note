@@ -1,7 +1,40 @@
 # Git Learning Notes
 
+## 基礎設定 & concept
 
-## 新增或修改檔案
+### user
+
+一開始必須要做初始化的設定，若有 --global 參數，只需要做這工作一次，不論 Git 做任何事都會採用此資訊
+
+```zsh
+$ git config --global user.name "Sean Chou"
+$ git config --global user.email "xxxx@gmail.com"
+```
+
+### ssh key
+
+大多數 Git 伺服器都會選擇使用 SSH 公開金鑰來進行授權。以 github 為例:
+
+首先先建立一個 ssh key
+
+```zsh
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+use command line to copy key 
+
+```zsh
+$ clip < ~/.ssh/id_rsa.pub
+```
+
+接著只要到 github 帳號設定葉面去做新增就可以了
+
+在 github 的教學頁面寫得很詳細:
+
+https://help.github.com/articles/connecting-to-github-with-ssh/
+
+
+### 檔案的狀態
 
 新增的檔案 -> Untracked files
 改動過的檔案 -> Changes not staged for commit
@@ -21,8 +54,8 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-## 常用指令
 
+## 常用指令
 
 ### git status
 
@@ -80,6 +113,19 @@ Unstaged changes after reset:
 M       others/tool-notes.md
 ```
 
+### git pull
+
+抓取遠端的資料下來
+
+```zsh
+$ git pull origin master
+```
+
+* notes:
+  + git pull = git fetch + git merge 
+  + git pull --rebase = git fetch + git 
+
+
 ### git push origin master 
 
 push commit to master branch
@@ -128,42 +174,6 @@ $ git stash pop
 $ git stash apply stash@{0}
 ```
 
-
-### branch 相關
-
-#### 直接建立一個新的 branch
-
-```zsh
-$ git branch [BranchName]
-```
-
-#### 切換到某 branch
-
-```zsh
-$ git checkout [BranchName]
-```
-
-
-#### 建立 branch，並將目前工作目錄切換到新的 branch
-
-```zsh
-$ git checkout -b [BranchName]
-```
-
-#### 查看 loacl branch 與他的 remote branch
-
-```zsh
-$ git branch -vv 
-```
-
-#### 刪除 branch
-
-不能刪除目前工作目錄所指定的 branch，必須先切換到其他 branch，再刪除目前這個 branch
-
-```zsh
-$ git branch -d [BranchName]
-```
-
 ### git log
 
 可以查看 log
@@ -179,11 +189,46 @@ Date:   Sat Apr 7 11:18:04 2018 +0800
     ...  
 ```
 
-### 合併
+## branch 相關
+
+### 直接建立一個新的 branch
+
+```zsh
+$ git branch [BranchName]
+```
+
+### 切換到某 branch
+
+```zsh
+$ git checkout [BranchName]
+```
+
+
+### 建立 branch，並將目前工作目錄切換到新的 branch
+
+```zsh
+$ git checkout -b [BranchName]
+```
+
+### 查看 loacl branch 與他的 remote branch
+
+```zsh
+$ git branch -vv 
+```
+
+### 刪除 branch
+
+不能刪除目前工作目錄所指定的 branch，必須先切換到其他 branch，再刪除目前這個 branch
+
+```zsh
+$ git branch -d [BranchName]
+```
+
+## 合併
 
 當從 master 拉出新的 feature branch 或是 bugfix branch 的時候
 
-#### git merge
+### git merge
 
 用於合併兩個 branch，但注意合併時用 git merge [另一個分支] 來將另一個分支的變更合併回來，比如說要把一個 new_feature merge 回 master，就必須要先到 master branch，然後才去下 <code>git merge new_feature</code>
 
@@ -191,7 +236,7 @@ Date:   Sat Apr 7 11:18:04 2018 +0800
 $ git merge [BranchName]
 ```
 
-#### git rebase
+### git rebase
 
 可以將新的 branch 合併回 master，master 的 HEAD 會移動到 new branch 的 HEAD 這裡。使用 rebase 的話會影響到歷史紀錄。
 
@@ -265,6 +310,13 @@ f8a333e HEAD@{8}: pull: Fast-forward
 6c0dd65 HEAD@{15}: reset: moving to HEAD~
 4db1183 HEAD@{16}: commit: update
 ```
+
+## Pull Request
+
+詳見另一章節: 
+
+https://github.com/sean1093/learning-note/blob/develop/others/git-pull-request-notes.md
+
 
 ## Reference
 

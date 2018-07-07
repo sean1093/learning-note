@@ -1,5 +1,7 @@
 # CSS Flexbox
 
+## basic 
+
 Flex 意為彈性的布局，舉例來說:
 
 ```css
@@ -12,6 +14,9 @@ Flex 意為彈性的布局，舉例來說:
 }
 ```
 
+外層會有一個 container (flex-container)，以及內部的 items (flex-item)
 
 ## Reference
 * http://www.oxxostudio.tw/articles/201501/css-flexbox.html
+* http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+* https://wcc723.github.io/css/2017/07/21/css-flex/
