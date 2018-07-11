@@ -7,6 +7,7 @@
 ## ML Concepts
 
 1. [ML Framing](ml-framing.md)
+2. [Descending into ML](ml-descending-into-ml.md)
 
 ## ML Engineering
 

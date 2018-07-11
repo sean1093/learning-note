@@ -1,5 +1,10 @@
 # Descending into ML
 
+Course link:
+
+* https://developers.google.com/machine-learning/crash-course/descending-into-ml/linear-regression
+* https://developers.google.com/machine-learning/crash-course/descending-into-ml/training-and-loss
+
 ## Linear Regression
 
 線性迴歸（linear regression）是在資料點中找出規律、畫出一條直線，可以建立一個簡易的方程式。
