@@ -2,8 +2,7 @@
 
 Course link:
 
-* https://developers.google.com/machine-learning/crash-course/descending-into-ml/linear-regression
-* https://developers.google.com/machine-learning/crash-course/descending-into-ml/training-and-loss
+https://developers.google.com/machine-learning/crash-course/descending-into-ml/video-lecture
 
 ## Linear Regression
 

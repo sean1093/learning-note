@@ -1,6 +1,8 @@
 # Framing
 
-Course link: https://developers.google.com/machine-learning/crash-course/framing/ml-terminology
+Course link: 
+
+https://developers.google.com/machine-learning/crash-course/framing/video-lecture
 
 ## Supervised Learning
 
