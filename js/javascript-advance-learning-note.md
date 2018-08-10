@@ -97,6 +97,8 @@ const c = () => {console.log("hello");};
 c();
 ```
 
+### 不會改變 this 本來的綁定
+
 
 ## Template strings
 
