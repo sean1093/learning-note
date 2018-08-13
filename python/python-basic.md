@@ -46,13 +46,91 @@ a = None
 def fun():
     global a    # 使用之前在全局里定义的 a
     a = 20      # 现在的 a 是全局变量了
-    return a+100
+    return a + 100
 
 print(APPLE)    # 100
 print('a past:', a)  # None
 fun()
 print('a now:', a)   # 20
 ```
+
+## yield and generator 
+
+yield 跟 return 很像，只是 return 的時候 function call stack 會被清掉，下一次再 call 會重新來。yield 則是下次呼叫時，可以從上次還未執行到的部分繼續執行，而不是重新建立一個新 stack。
+
+可以使用 next & send
+
+* next
+
+```python
+def yield_function():
+    i = 0
+    yield i
+    i = 1
+    yield i
+     
+generator = yield_function()
+print generator.next()
+print ('restart')
+print generator.next()
+```
+
+會印出
+
+```zsh
+0
+restart
+1
+```
+
+或是使用變數去接 yield
+
+```python
+def yield_function():
+    i = 0
+    a = yield i
+    i = 1
+    yield a
+     
+generator = yield_function()
+print generator.next()
+print ('restart')
+print generator.next()
+```
+
+會印出
+
+```zsh
+0
+restart
+none
+```
+
+* send
+
+可以從呼叫 function 的地方得到參數帶入 yield
+
+```python
+def yield_function():
+    i = 0
+    a = yield i
+    i = 1
+    yield a
+     
+generator = yield_function()
+print generator.next()
+print ('restart')
+print generator.send(8)
+```
+
+會印出
+
+```zsh
+0
+restart
+8
+```
+
 
 ## scope & LEGB
 
