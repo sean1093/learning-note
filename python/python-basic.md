@@ -54,88 +54,41 @@ fun()
 print('a now:', a)   # 20
 ```
 
-## yield and generator 
+## *args and **kwargs
 
-yield 跟 return 很像，只是 return 的時候 function call stack 會被清掉，下一次再 call 會重新來。yield 則是下次呼叫時，可以從上次還未執行到的部分繼續執行，而不是重新建立一個新 stack。
+在 function 參數傳遞的時候，*args and **kwargs 都代表了在接參數的時候可以不事先指定數目
 
-可以使用 next & send
-
-* next
+差異是 *args 接值，**kwargs 接的是 key-value 的 pair
 
 ```python
-def yield_function():
-    i = 0
-    yield i
-    i = 1
-    yield i
-     
-generator = yield_function()
-print generator.next()
-print ('restart')
-print generator.next()
+
+def args_kwargs(arg1, arg2, arg3):
+    print("arg1:", arg1)
+    print("arg2:", arg2)
+    print("arg3:", arg3)
+
+>>> args = ("a", 1, 2)
+>>> args_kwargs(*args)
+arg1: a
+arg2: 1
+arg3: 2
+
+
+>>> kwargs = {"arg3": 3, "arg2": "two", "arg1": 1}
+>>> args_kwargs(**kwargs)
+arg1: 1
+arg2: two
+arg3: 3
 ```
 
-會印出
-
-```zsh
-0
-restart
-1
-```
-
-或是使用變數去接 yield
+這裡要注意，如果想在同一個 function 同時使用，順序如下
 
 ```python
-def yield_function():
-    i = 0
-    a = yield i
-    i = 1
-    yield a
-     
-generator = yield_function()
-print generator.next()
-print ('restart')
-print generator.next()
+func(fargs, *args, **kwargs)
 ```
 
-會印出
-
-```zsh
-0
-restart
-none
-```
-
-* send
-
-可以從呼叫 function 的地方得到參數帶入 yield
-
-```python
-def yield_function():
-    i = 0
-    a = yield i
-    i = 1
-    yield a
-     
-generator = yield_function()
-print generator.next()
-print ('restart')
-print generator.send(8)
-```
-
-會印出
-
-```zsh
-0
-restart
-8
-```
-
-
-## scope & LEGB
-
-https://segmentfault.com/a/1190000000640834
 
 ## reference
 * http://www.runoob.com/python3/python3-tutorial.html
 * https://openhome.cc/Gossip/CodeData/PythonTutorial/index.html
+* https://github.com/qiwsir/ITArticles/blob/master/BasicPython/index.md
