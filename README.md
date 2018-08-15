@@ -1,5 +1,11 @@
 # learning-note
 
+<<<<<<< HEAD
+=======
+Here is something learning notes.
+一些技術的自我學習筆記。 
+
+>>>>>>> develop
 ### HTML
 #### [HTML basic Learning Note] 
 
@@ -31,8 +37,13 @@
 #### [React basic Learning Note]
 #### [Redux Learning Note]
 
-### Others
+### Git
 #### [Git Learning Note]
+#### [Git Pull Request Note]
+#### [Git Sharing Note]
+
+### Python
+
 
 ### 參考資料
 JavaScript 考題 & 觀念: 
@@ -50,19 +61,19 @@ Git 學習
 
 
 
-[HTML basic Learning Note]: <https://github.com/sean1093/learning-note/blob/master/html/html-learning-note.md>
+[HTML basic Learning Note]: <html/html-learning-note.md>
 
-[JavaScript Basic Knowledage Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-note.md>
-[JavaScript Object Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-object-note.md>
-[JavaScript Array Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-array-note.md>
-[JavaScript Function Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-learning-function-note.md>
-[JavaScript Advance Learning Note]: <https://github.com/sean1093/learning-note/blob/master/js/javascript-advance-learning-note.md>
+[JavaScript Basic Knowledage Learning Note]: <js/javascript-learning-note.md>
+[JavaScript Object Learning Note]: <js/javascript-learning-object-note.md>
+[JavaScript Array Learning Note]: <js/javascript-learning-array-note.md>
+[JavaScript Function Learning Note]: <js/javascript-learning-function-note.md>
+[JavaScript Advance Learning Note]: <js/javascript-advance-learning-note.md>
 
-[CSS Learning Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-learning-note.md>
-[CSS Animation Learning Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-animation-note.md>
-[CSS RWD Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-rwd-note.md>
-[SCSS Note]: <https://github.com/sean1093/learning-note/blob/master/css/css-sass-note.md>
-[Bootstarp Learning Note]: <https://github.com/sean1093/learning-note/blob/master/framework/bootstrap-learning-note.md>
+[CSS Learning Note]: <css/css-learning-note.md>
+[CSS Animation Learning Note]: <css/css-animation-note.md>
+[CSS RWD Note]: <css/css-rwd-note.md>
+[SCSS Note]: <css/css-sass-note.md>
+[Bootstarp Learning Note]: <framework/bootstrap-learning-note.md>
 
 [01 Environment and introduction]: <https://github.com/sean1093/angular-starter/blob/master/01.environment-and-introduction.md>
 [02 Run and Build Project]: <https://github.com/sean1093/angular-starter/blob/master/02.run-and-build-project.md>
@@ -74,4 +85,9 @@ Git 學習
 [React basic Learning Note]: <https://github.com/sean1093/react-starter/blob/master/react-notes.md>
 [Redux Learning Note]: <https://github.com/sean1093/react-starter/blob/master/redux-notes.md>
 
-[Git Learning Note]: <https://github.com/sean1093/learning-note/blob/master/others/git-learning-notes.md>
+[Git Learning Note]: <git/git-learning-notes.md>
+[Git Pull Request Note]: <git/git-pull-request-notes.md>
+[Git Sharing Note]: <git/git-sharing-notes.md>
+
+[Python Basic Note]: <python/python-basic.md>
+[Python Basic 2 Note]: <python/python-basic-2.md>
