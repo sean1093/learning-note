@@ -85,3 +85,6 @@ Git 學習
 [Git Learning Note]: <git/git-learning-notes.md>
 [Git Pull Request Note]: <git/git-pull-request-notes.md>
 [Git Sharing Note]: <git/git-sharing-notes.md>
+
+[Python Basic Note]: <python/python-basic.md>
+[Python Basic 2 Note]: <python/python-basic-2.md>
