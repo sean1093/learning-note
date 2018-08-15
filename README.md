@@ -1,11 +1,8 @@
 # learning-note
 
-<<<<<<< HEAD
-=======
 Here is something learning notes.
 一些技術的自我學習筆記。 
 
->>>>>>> develop
 ### HTML
 #### [HTML basic Learning Note] 
 
