@@ -16,6 +16,11 @@ id = 100
 counter = 100.5
 ```
 
+## slice
+
+![slice01](../img/python/slice01.png "slice01")
+
+
 
 ## function
 

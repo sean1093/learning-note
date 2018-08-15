@@ -38,12 +38,17 @@ True
 False
 ```
 
+* iter a dicts
+
+![iter01](../img/python/iter01.png "iter01")
+
+
 
 ### Generator
 
 > In Python, generators provide a convenient way to implement the iterator protocol. Generator is an iterable created using a function with a yield statement.
 
-Generator 就是利用 yield 把 function 變成 iterable 
+Generator 就是利用 yield 把 function 變成 iterable，回傳值是一個 generator object
 
 #### yield
 
@@ -120,6 +125,21 @@ print generator.send(8)
 0
 restart
 8
+```
+
+* generator function output
+
+generator function 會回傳 generator object，需要用 list 轉換
+
+```python
+def scramble(seq):
+    for i in range(len(seq)):
+        yield seq[i:] + seq[:i]
+
+>>> scramble('spam')
+<generator object scramble at 0x10a017db0>
+>>> list(scramble('spam'))
+['spam', 'pams', 'amsp', 'mspa']
 ```
 
 
