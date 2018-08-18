@@ -69,8 +69,8 @@ describe("A suite of basic functions", function() {
 
 * success
 
-![success](https://github.com/sean1093/learning-note/blob/master/img/unit-karma-success.png "success")
+![success](../img/unit-karma-success.png "success")
 
 * failed
 
-![failed](https://github.com/sean1093/learning-note/blob/master/img/unit-karma-failed.png "failed")
+![failed](../img/unit-karma-failed.png "failed")

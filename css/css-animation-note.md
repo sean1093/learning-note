@@ -97,8 +97,8 @@
 
 
 
-[css-animation-sample]: <https://github.com/sean1093/js-css-component/blob/master/css/animation-into-bigger.html>
-[css-animation-event-sample]: <https://github.com/sean1093/js-css-component/blob/master/css/animation-event.html>
+[css-animation-sample]: <animation-into-bigger.html>
+[css-animation-event-sample]: <animation-event.html>
 
 
 

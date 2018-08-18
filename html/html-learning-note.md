@@ -88,7 +88,7 @@ HTML 5 新增了 defer & async 兩種新屬性
 * _top      : Opens the linked document in the full body of the window
 * framename : Opens the linked document in a named frame
 
-![box-model](https://github.com/sean1093/learning-note/blob/master/img/html-target.png "target")
+![box-model](../img/html-target.png "target")
 
 Demo page: [target-demo]
 
