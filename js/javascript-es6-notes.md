@@ -1,4 +1,4 @@
-# ES6
+# ES6 new feature
 
 ## Symbol
 
@@ -27,6 +27,43 @@ const chartType = {
 reference: 
 https://zhuanlan.zhihu.com/p/22652486
 http://es6.ruanyifeng.com/#docs/symbol
+
+## Set and Map
+
+### Set
+
+類似於 array，但是內容不能重複
+
+```js
+const set = new Set([4, 5, 6, 7, 2, 5, 6, 2, 2, 2]);
+
+for (let s of set) {
+  console.log(s);
+}
+
+// 只會印出 4, 5, 6, 7, 2
+```
+
+#### Set function
+
+* size(): 回傳 Set 大小
+* add(value): 加入新值，回傳 Set 本身
+* delete(value): 刪除一個值，回傳成功與否的 boolean
+* has(value): 回傳有無特定值 boolean
+* clear(): 清除所有元素，no return
+* keys: 回傳 keys 的 iterator 
+* values: 回傳 values 的 iterator 
+>  Set 只有值，所以 keys and values 兩者會一樣
+* entries: 回傳 keys+values 的 iterator 
+> Set 只有值，所以兩者會一樣 => [key, value] 
+
+#### WeakSet
+
+### Map
+
+讓 JavaScript object 中的 key 可以使用 string 以外的型態。
+
+
 
 
 ## Generator

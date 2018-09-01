@@ -1,5 +1,7 @@
 # Iterator
 
+TypeScript 2.3 adds full support for generators and the Iterator 
+
 https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html
 https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-3.html
 
