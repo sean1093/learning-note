@@ -7,6 +7,9 @@ http://www.typescriptlang.org/docs/handbook/iterators-and-generators.html
 
 Iterator and Iterables
 
+https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols
+
+
 有哪些 & 例子(array, string)
 
 for..of statements
