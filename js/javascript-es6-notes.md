@@ -63,7 +63,9 @@ for (let s of set) {
 
 讓 JavaScript object 中的 key 可以使用 string 以外的型態。
 
+## Iterator
 
+Iterator 為各種不同數據結構提供統一的訪問機制
 
 
 ## Generator
