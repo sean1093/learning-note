@@ -34,7 +34,7 @@ for (let entry of someArray) {
 }
 ```
 
-### Implement <code>for..of</code> by youself (compile result)
+### <code>for..of</code> compile result
 
 ```js
 let numbers = [1, 2, 3];
@@ -94,9 +94,54 @@ for (let pet of pets) {
 ![forof](../img/ts/forof.jpg "forof")
 
 
-## what is generator
+## What is generator
 
-## 怎麼使用 generator
+> The Generator object is returned by a generator function and it conforms to both the iterable protocol and the iterator protocol.
+
+Generator 是 ES6 之後提供的一種 asynchronous 的解決方案。
+
+Generator function 可以視為一種狀態機，封裝了多個內部狀態。
+
+### How to use generator
+
+* star between function keyword and name
+* use yield to define different state
+
+```js
+function* gen() { 
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const g = gen(); // "Generator { }"
+```
+
+Generator 是分段執行，<code>yield</code> 是暫停的標誌，而 <code>next</code> 方法可以恢復執行。
+
+使用的時候利用 <code>next</code> function，來使指針一到下一個 狀態 (yield 的位置)，會回傳一個包含 value & done 兩個屬性的 object
+
+* value: 為此狀態的值
+* done: 會回傳這個 generator 結束與否 (true / false)
+
+當執行遇到 yield 表達式，就暫停執行後面的操作，並將緊跟在 yield 後面的那個表達式的值，作為返回的對象的 value 屬性值
+
+直到所有直都走完後，最後會回傳 <code>{value: undefined, done: true}</code> 代表結束
+
+```js
+g.next();
+> {value: 1, done: false}
+g.next();
+> {value: 2, done: false}
+g.next();
+> {value: 3, done: false}
+g.next();
+> {value: undefined, done: true}
+```
+
+![generator](../img/ts/generator.png "generator")
+
+
 
 ## Reference
 
