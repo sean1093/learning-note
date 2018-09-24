@@ -121,7 +121,7 @@ for (let pet of pets) {
 }
 ```
 
-![forof](../img/ts/forof.jpg "forof")
+![forof](../img/ts/forof.JPG "forof")
 
 
 ## What is generator
