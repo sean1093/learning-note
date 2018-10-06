@@ -37,27 +37,54 @@ See more: https://www.impressivewebs.com/callback-functions-javascript/
 
 從 ES6 之後才出現的，主要是可以避免層層 callback 造成所謂的 (callback hell)。
 
-basic promise example:
+Basic promise example: 建立一個 Promise Object
 
 ```js
-const promise = new Promise(function(resolve, reject) {
+const promise = new Promise((resolve, reject) =>  {
     if (true) {
         resolve("ok!");
     }
     else {
-        reject(Error("It broke"));
+        reject(Error("Fail"));
     }
 });
+```
 
-promise.then(function(result) {
+Promise object 產生後，使用 <code>then</code> 來分別指定 <code>resolve</code> 和 <code>reject</code> 的 callback function
+
+
+```js
+promise.then((result) => {
     console.log(result); // "ok!"
-}, function(err) {
+}, (err) => {
     console.log(err); // Error: "It broke"
 });
 
 ```
 
-reference: https://eyesofkids.gitbooks.io/javascript-start-es6-promise/content/
+Promise 建立後會立即執行
+
+```js
+const promise = new Promise((resolve, reject) => {
+    console.log('Promise Create');
+    resolve();
+});
+
+promise.then(() => {
+    console.log('Hello World');
+});
+
+console.log('End');
+
+// Promise Create
+// End
+// Hello World
+```
+
+### reference: 
+
+* https://eyesofkids.gitbooks.io/javascript-start-es6-promise/content/
+* http://es6.ruanyifeng.com/#docs/promise
 
 
 ## Arrow Function (ES6)
