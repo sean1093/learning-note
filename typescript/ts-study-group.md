@@ -12,8 +12,9 @@ https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-3.html
 
 > In order to be iterable, an object must implement the @@iterator method, meaning that the object (or one of the objects up its prototype chain) must have a property with a @@iterator key which is available via constant Symbol.iterator
 
+Iterable，一個物件必須實作 @@iterator 方法，也就是這個物件必須擁有一個鍵（key）值為 @@iterator（即 Symbol.iterator 常數）的屬性。
 
-iterable， 允許 JavaScript 物件定義或客制他們的迭代行為。例如哪些值可在 <code>for..of</code> 語法結構中被迭代出來。
+>每當物件需要被迭代時（比如在一個開始的 for..of 迴圈中），物件的 @@iterator 方法會被以不傳入引數的方式呼叫，並會使用其回傳的迭代器（iterator）來獲得被迭代出來的值。
 
 * Default is an iterable object:
     * <code>Array</code>
@@ -21,9 +22,19 @@ iterable， 允許 JavaScript 物件定義或客制他們的迭代行為。例�
     * <code>Set</code>
     * <code>String</code>
 
+Ex: Symbol.iterator in an Array
+
+![iterable](../img/ts/iterable.PNG "iterable")
+
+<strong>當物件以下列語義實作了 next() 方法即為一個Iterator</strong>
+
+![iterator](../img/ts/iterator.PNG "iterator")
+
+_https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols_
+
 ## for..of statements
 
-> <code>for..of</code> loops over an iterable object, invoking the Symbol.iterator property on the object.
+><code>for..of</code> loops over an iterable object, invoking the Symbol.iterator property on the object.
 
 印出 target iterable object 的 value
 
@@ -174,6 +185,27 @@ g.next();
 
 ![generator](../img/ts/generator.png "generator")
 
+如果在 generator 之中遇到了 return
+
+```js
+function* gen() { 
+    yield 1;
+    return 2;
+    yield 3;
+}
+
+const g = gen();
+
+g.next();
+> {value: 1, done: false}
+
+g.next();
+> {value: 2, done: true}
+
+g.next();
+> {value: undefined, done: true}
+```
+
 ### More about yield 
 
 #### 表達式執行時間
@@ -182,7 +214,7 @@ g.next();
 
 ```js
 function* gen() {
-    yield  123 + 456;
+    yield 123 + 456;
 }
 
 const g = gen();
