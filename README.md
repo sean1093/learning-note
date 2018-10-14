@@ -3,50 +3,50 @@
 Here is something learning notes.
 <strong>
 ### HTML
-[HTML basic Learning Note] 
-[HTML Web Learning Notes]
+* [HTML basic Learning Note] 
+* [HTML Web Learning Notes]
 
 ### JavaScript
-[JavaScript Basic Knowledage Learning Note]
-[JavaScript Object Learning Note] 
-[JavaScript Array Learning Note] 
-[JavaScript Function Learning Note] 
-[JavaScript Advance Learning Note] 
-[JavaScript ES6 Note]
+* [JavaScript Basic Knowledage Learning Note]
+* [JavaScript Object Learning Note] 
+* [JavaScript Array Learning Note] 
+* [JavaScript Function Learning Note] 
+* [JavaScript Advance Learning Note] 
+* [JavaScript ES6 Note]
 
 ### CSS
-[CSS Learning Note] 
-[CSS Animation Learning Note]
-[CSS RWD Note]  
-[SCSS Note]
+* [CSS Learning Note] 
+* [CSS Animation Learning Note]
+* [CSS RWD Note]  
+* [SCSS Note]
 
 ### Bootstarp
-[Bootstarp Learning Note] 
+* [Bootstarp Learning Note] 
 
 ### Angular
-[01 Environment and introduction]
-[02 Run and Build Project]
-[03 Concept]
-[04 Interaction with Components]
-[05 Http Module]
-[06 Commom issue]
+* [01 Environment and introduction]
+* [02 Run and Build Project]
+* [03 Concept]
+* [04 Interaction with Components]
+* [05 Http Module]
+* [06 Commom issue]
 
 ### React
-[React basic Learning Note]
-[Redux Learning Note]
+* [React basic Learning Note]
+* [Redux Learning Note]
 
 ### Git
-[Git Learning Note]
-[Git Pull Request Note]
-[Git Sharing Note]
+* [Git Learning Note]
+* [Git Pull Request Note]
+* [Git Sharing Note]
 
 ### Python
-[Python Basic Note]
-[Python Basic 2 Note]
-[Jupyter Notebook]
+* [Python Basic Note]
+* [Python Basic 2 Note]
+* [Jupyter Notebook]
 
 ### Machine Learning
-[ML Google Learning notes]
+* [ML Google Learning notes]
 </strong>
 
 ### 參考資料
