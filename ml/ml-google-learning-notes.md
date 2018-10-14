@@ -14,6 +14,7 @@ https://developers.google.com/machine-learning/crash-course/ml-intro
 5. [Generalization](ml-generalization.md)
 6. [Splitting data and validation](ml-splitting-data-and-validation.md)
 7. [Feature Engineering](ml-feature-engineering.md)
+8. [Feature Crosses](ml-feature-crosses.md)
 
 ## ML Engineering
 
