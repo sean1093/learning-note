@@ -20,3 +20,7 @@ https://developers.google.com/machine-learning/crash-course/ml-intro
 
 ## ML Real World Examples
 
+
+# Other refernece
+* https://ithelp.ithome.com.tw/users/20103529/ironman/1212
+
