@@ -41,8 +41,25 @@ Web Storage 包含 sessionStorage & localStorage
 reference: https://www.huanlintalk.com/2012/06/html5-web-storage.html
 
 
+## Login
+
+// ?
+user 登入後，server 生成 token 給 user 存到 cookies 裡面，server 並且存到 session 裡面
+client 端每次換頁都使用這個 sessionid + token + user name 丟給 server 做驗證
+定期 refresh token
+
+### CSRF
+
+https://blog.techbridge.cc/2017/02/25/csrf-introduction/
+
+
 ## Server-Side Rendering
 
-// TODO
+
+
+## Reference
+* 你會做WEB上的用戶登入功能嗎？
+   + https://coolshell.cn/articles/5353.html
+
 
 
