@@ -42,6 +42,12 @@ npm i babel-loader@8 @babel/core @babel/preset-env @babel/preset-react -D
 npm i html-webpack-plugin -D
 ```
 
+<strong>Install webpack-dev-server</strong>
+
+```sh
+npm i webpack-dev-server -D
+```
+
 並修改 package.json
 
 ```json
