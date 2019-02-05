@@ -90,3 +90,10 @@ reference: https://stackoverflow.com/questions/43043874/react-parent-component-d
 
 * this.state: 存取 state
 * setState(): 會更新 state ，並且重新呼叫 render() 方法
+
+## TODO read
+
+fiber
+
+* https://blog.techbridge.cc/2018/03/31/react-fiber-and-lifecycle-change/
+* https://medium.com/@_cybai/%E7%BF%BB%E8%AD%AF-react-fiber-%E7%8F%BE%E7%8B%80%E7%A2%BA%E8%AA%8D-fd3808072279
