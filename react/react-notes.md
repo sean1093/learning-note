@@ -6,6 +6,8 @@ React 是 Facebook 推出的 JavaScript Library，定位在 View 的位置。
 
 ## Install
 
+### create-react-app
+
 直接使用 facebook 所出的 create-react-app
 
 > Create React App is the best way to start building a new React single page application. It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 6 on your machine.
@@ -16,6 +18,12 @@ React 是 Facebook 推出的 JavaScript Library，定位在 View 的位置。
 npm install -g create-react-app
 create-react-app my-app
 ```
+
+### Install by package.json
+
+[starter/package.json]
+
+[starter/package.json]: <starter/package.json>
 
 ## Component Lifecycle
 
@@ -72,11 +80,11 @@ reference: https://stackoverflow.com/questions/43043874/react-parent-component-d
 
 ## props and state
 
-### props 
+### props
 
 讓 component 可以接收外部 data，並且對傳入的 props。也有驗證 props 和預設值的功能
 
-### state 
+### state
 
 用來記錄和管理 component 的狀態
 

@@ -1,12 +1,14 @@
 # learning-note
 
-Here is something learning notes.
-<strong>
-### HTML
-* [HTML basic Learning Note] 
+Self-learning notes.
+
+## HTML
+
+* [HTML basic Learning Note]
 * [HTML Web Learning Notes]
 
-### JavaScript
+## JavaScript
+
 * [JavaScript Basic Knowledage Learning Note]
 * [JavaScript Object Learning Note] 
 * [JavaScript Array Learning Note] 
@@ -14,16 +16,19 @@ Here is something learning notes.
 * [JavaScript Advance Learning Note] 
 * [JavaScript ES6 Note]
 
-### CSS
-* [CSS Learning Note] 
+## CSS
+
+* [CSS Learning Note]
 * [CSS Animation Learning Note]
 * [CSS RWD Note]  
 * [SCSS Note]
 
-### Bootstarp
-* [Bootstarp Learning Note] 
+## Bootstarp
 
-### Angular
+* [Bootstarp Learning Note]
+
+## Angular
+
 * [01 Environment and introduction]
 * [02 Run and Build Project]
 * [03 Concept]
@@ -31,26 +36,39 @@ Here is something learning notes.
 * [05 Http Module]
 * [06 Commom issue]
 
-### React
+## React
+
 * [React basic Learning Note]
 * [Redux Learning Note]
 
-### Git
+## Git
+
 * [Git Learning Note]
 * [Git Pull Request Note]
 * [Git Sharing Note]
 
-### Python
+## Python
+
 * [Python Basic Note]
 * [Python Basic 2 Note]
 * [Jupyter Notebook]
 
-### Machine Learning
+## Machine Learning
+
 * [ML Google Learning notes]
-</strong>
+    1. [ML Framing](ml/ml-framing.md)
+    2. [Descending into ML](ml/ml-descending-into-ml.md)
+    3. [Reducing Loss](ml/ml-reducing-loss.md)
+    4. [TensorFlow](ml/ml-tensorFlow.md)
+    5. [Generalization](ml/ml-generalization.md)
+    6. [Splitting data and validation](ml/ml-splitting-data-and-validation.md)
+    7. [Feature Engineering](ml/ml-feature-engineering.md)
+    8. [Feature Crosses](ml/ml-feature-crosses.md)
 
 ### 參考資料
-JavaScript 考題 & 觀念: 
+
+JavaScript 考題 & 觀念:
+
 * http://ourjs.com/detail/52fb82e13bd19c4814000001
 * https://mdluo.com/blog/about-front-end-interview/
 * https://leohxj.gitbooks.io/front-end-database/interview/interview-exercises-with-JavaScript.html
@@ -62,8 +80,6 @@ JavaScript 考題 & 觀念:
 
 Git 學習
 * https://backlog.com/git-tutorial/tw/
-
-
 
 [HTML basic Learning Note]: <html/html-learning-note.md>
 [HTML Web Learning Notes]: <html/html-web-notes.md>
@@ -98,6 +114,5 @@ Git 學習
 [Python Basic Note]: <python/python-basic.md>
 [Python Basic 2 Note]: <python/python-basic-2.md>
 [Jupyter Notebook]: <python/jupyter-notebook.md>
-
 
 [ML Google Learning notes]: <ml/[ml-google-learning-notes.md]>
