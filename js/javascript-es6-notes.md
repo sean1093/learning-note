@@ -15,7 +15,7 @@ const chartType = {
 
 當我們使用的時候，事實上變數內的內容並不重要，只需要不要重複即可
 
-ES6 可改為利用 Symbol，為一不重複的類型
+ES6 可改為利用 Symbol，為一不重複的類型
 
 ```js
 const chartType = {

@@ -89,7 +89,7 @@ Git 學習
 [JavaScript Array Learning Note]: <js/javascript-learning-array-note.md>
 [JavaScript Function Learning Note]: <js/javascript-learning-function-note.md>
 [JavaScript Advance Learning Note]: <js/javascript-advance-learning-note.md>
-[JavaScript ES6 Note]: <js/javascript-es6-note.md>
+[JavaScript ES6 Note]: <js/javascript-es6-notes.md>
 
 [CSS Learning Note]: <css/css-learning-note.md>
 [CSS Animation Learning Note]: <css/css-animation-note.md>
