@@ -21,6 +21,7 @@ Self-learning notes.
 * [CSS Learning Note](css/css-learning-note.md)
 * [CSS Animation Learning Note](css/css-animation-note.md)
 * [CSS RWD Note](css/css-rwd-note.md) 
+* [CSS Flex Note](css/css-flexbox-note.md) 
 * [SCSS Note](css/css-sass-note.md)
 
 ### Bootstarp

@@ -135,7 +135,7 @@ display : inline 的 HTML 元素可以有 margin-left 、 margin-right 、 paddi
 
 ### Flex
 
-2009年，W3C 提出的新 display 方式，詳見:
+2009年，W3C 提出的新 display 方式，詳見: [CSS Flex Note](css-flexbox-note.md) 
 
 
 ## position
