@@ -4,58 +4,62 @@ Self-learning notes.
 
 ## HTML
 
-* [HTML basic Learning Note]
-* [HTML Web Learning Notes]
+* [HTML basic Learning Note](html/html-learning-note.md)
+* [HTML Web Learning Notes](html/html-web-notes.md)
 
 ## JavaScript
 
-* [JavaScript Basic Knowledage Learning Note]
-* [JavaScript Object Learning Note] 
-* [JavaScript Array Learning Note] 
-* [JavaScript Function Learning Note] 
-* [JavaScript Advance Learning Note] 
-* [JavaScript ES6 Note]
+* [JavaScript Basic Knowledage Learning Note](js/javascript-learning-note.md)
+* [JavaScript Object Learning Note](js/javascript-learning-object-note.md)
+* [JavaScript Array Learning Note](js/javascript-learning-array-note.md)
+* [JavaScript Function Learning Note](js/javascript-learning-function-note.md) 
+* [JavaScript Advance Learning Note](js/javascript-advance-learning-note.md)
+* [JavaScript ES6 Note](js/javascript-es6-notes.md)
 
 ## CSS
 
-* [CSS Learning Note]
-* [CSS Animation Learning Note]
-* [CSS RWD Note]  
-* [SCSS Note]
+* [CSS Learning Note](css/css-learning-note.md)
+* [CSS Animation Learning Note](css/css-animation-note.md)
+* [CSS RWD Note](css/css-rwd-note.md) 
+* [SCSS Note](css/css-sass-note.md)
 
-## Bootstarp
+### Bootstarp
 
-* [Bootstarp Learning Note]
+* [Bootstarp Learning Note](framework/bootstrap-learning-note.md)
 
 ## Angular
 
-* [01 Environment and introduction]
-* [02 Run and Build Project]
-* [03 Concept]
-* [04 Interaction with Components]
-* [05 Http Module]
-* [06 Commom issue]
+* [01 Environment and introduction](angular/01.environment-and-introduction.md)
+* [02 Run and Build Project](angular/02.run-and-build-project.md)
+* [03 Concept](angular/03.concept.md)
+* [04 Interaction with Components](angular/04.interaction-with-component.md)
+* [05 Http Module](angular/05.http-module.md)
+* [06 Commom issue](angular/06.commom-issue.md)
+
+Slides: [Angular Introduction](https://slides.com/seanchou/angular-4#/)
 
 ## React
 
-* [React basic Learning Note]
-* [Redux Learning Note]
+* [React basic Learning Note](react/react-notes.md)
+* [React Webpack Setting](react/react-webpack-stepbystep.md)
+* [Redux Learning Note](react/redux-notes.md)
 
 ## Git
 
-* [Git Learning Note]
-* [Git Pull Request Note]
-* [Git Sharing Note]
+* [Git Learning Note](git/git-learning-notes.md)
+* [Git Pull Request Note](git/git-pull-request-notes.md)
+* [Git Hooks](git/git-hook-notes.md)
+* [Git Sharing Note](git/git-sharing-notes.md)
 
 ## Python
 
-* [Python Basic Note]
-* [Python Basic 2 Note]
-* [Jupyter Notebook]
+* [Python Basic Note](python/python-basic.md)
+* [Python Basic 2 Note](python/python-basic-2.md)
+* [Jupyter Notebook](python/jupyter-notebook.md)
 
 ## Machine Learning
 
-* [ML Google Learning notes]
+* [ML Google Learning notes](ml/[ml-google-learning-notes.md)
     1. [ML Framing](ml/ml-framing.md)
     2. [Descending into ML](ml/ml-descending-into-ml.md)
     3. [Reducing Loss](ml/ml-reducing-loss.md)
@@ -81,38 +85,4 @@ JavaScript 考題 & 觀念:
 Git 學習
 * https://backlog.com/git-tutorial/tw/
 
-[HTML basic Learning Note]: <html/html-learning-note.md>
-[HTML Web Learning Notes]: <html/html-web-notes.md>
 
-[JavaScript Basic Knowledage Learning Note]: <js/javascript-learning-note.md>
-[JavaScript Object Learning Note]: <js/javascript-learning-object-note.md>
-[JavaScript Array Learning Note]: <js/javascript-learning-array-note.md>
-[JavaScript Function Learning Note]: <js/javascript-learning-function-note.md>
-[JavaScript Advance Learning Note]: <js/javascript-advance-learning-note.md>
-[JavaScript ES6 Note]: <js/javascript-es6-notes.md>
-
-[CSS Learning Note]: <css/css-learning-note.md>
-[CSS Animation Learning Note]: <css/css-animation-note.md>
-[CSS RWD Note]: <css/css-rwd-note.md>
-[SCSS Note]: <css/css-sass-note.md>
-[Bootstarp Learning Note]: <framework/bootstrap-learning-note.md>
-
-[01 Environment and introduction]: <angular/01.environment-and-introduction.md>
-[02 Run and Build Project]: <angular/02.run-and-build-project.md>
-[03 Concept]: <angular/03.concept.md>
-[04 Interaction with Components]: <angular/04.interaction-with-component.md>
-[05 Http Module]: <angular/05.http-module.md>
-[06 Commom issue]: <angular/06.commom-issue.md>
-
-[React basic Learning Note]: <react/react-notes.md>
-[Redux Learning Note]: <react/redux-notes.md>
-
-[Git Learning Note]: <git/git-learning-notes.md>
-[Git Pull Request Note]: <git/git-pull-request-notes.md>
-[Git Sharing Note]: <git/git-sharing-notes.md>
-
-[Python Basic Note]: <python/python-basic.md>
-[Python Basic 2 Note]: <python/python-basic-2.md>
-[Jupyter Notebook]: <python/jupyter-notebook.md>
-
-[ML Google Learning notes]: <ml/[ml-google-learning-notes.md]>

@@ -126,7 +126,7 @@ $ git pull origin master
   + git pull --rebase = git fetch + git 
 
 
-### git push origin master 
+### git push
 
 push commit to master branch
 
@@ -189,6 +189,31 @@ Date:   Sat Apr 7 11:18:04 2018 +0800
     ...  
 ```
 
+為了方便檢視 log，可以下 --oneline 的參數
+
+```zsh
+$ git log --oneline
+72c2388 (HEAD -> master, origin/master, origin/HEAD) update notes
+6afe45e update css notes
+d23426d update git notes
+45f049f update git learning notes
+d20b007 update javascript notes
+589dac7 update git learning notes
+3cff597 update git learning notes
+394f125 update readme
+...
+```
+
+如果想要讓 log 有 tree 結構化的顯示方式
+
+可以下
+
+```zsh
+$ git log --decorate --graph --oneline --abbrev-commit --all
+```
+
+P.S. 詳細參數設定都可以去 --help 裡面看
+
 ## branch 相關
 
 ### 直接建立一個新的 branch
@@ -250,6 +275,31 @@ https://gitbook.tw/chapters/branch/merge-with-rebase.html
 
 ## 回復
 
+### git reset
+
+當需要直接回復到某一個 commit 時，可以直接使用 git reset，但要注意的是，之後的 commit 都會被清除掉。
+
+舉例來說
+
+先使用 git log 去看一下目前狀態
+
+```zsh
+$ git log --oneline
+72c2388 (HEAD -> master, origin/master, origin/HEAD) update notes
+6afe45e update css notes
+d23426d update git notes
+45f049f update git learning notes
+d20b007 update javascript notes
+589dac7 update git learning notes
+3cff597 update git learning notes
+```
+
+如要要回復到 d20b007 update javascript notes
+
+```zsh
+$ git reset d20b007 
+```
+
 ### git revert
 
 > 新增一個 Commit 來反轉（或說取消）另一個 Commit 的內容，原本的 Commit 依舊還是會保留在歷史紀錄中。雖然會因此而增加 Commit 數，但通常比較適用於已經推出去的 Commit，或是不允許使用 Reset 或 Rebase 之修改歷史紀錄的指令的場合。
@@ -257,12 +307,11 @@ https://gitbook.tw/chapters/branch/merge-with-rebase.html
 > https://gitbook.tw/chapters/rewrite-history/reset-revert-and-rebase.html
 
 
-
 ### git cherry-pick
 
 只撿某些 Commit 來用
 
-先使用 git log 來列出所有的 commit
+先使用 git log {SHA} 來列出所有的 commit
 
 ```zsh
 $ git log --oneline
@@ -281,7 +330,6 @@ d20b007 update javascript notes
 ```zsh
 git cherry-pick 72c2388 d23426d 589dac7
 ```
-
 
 
 ## 其他操作
