@@ -1,9 +1,13 @@
 <style>
     .container {
+        height: 200px;
+        border:1px solid #000;
         display: flex;
-        flex-flow: row wrap;
-        /* flex-direction: row; */
+        /* flex-flow: row wrap; */
+        /* flex-direction: column; */
         /* flex-wrap: wrap-reverse; */
+        justify-content: space-around;
+        align-items: flex-end;
     }
     .item {
         border:1px solid #000;
@@ -13,14 +17,17 @@
     }
     .item1{
         width: 100px;
+        height: 50px;
         background: #FF8888;
     }
     .item2{
         width: 200px;
+        height: 100px;
         background: #9999FF;
     }
     .item3{
         width: 300px;
+        height: 150px;
         background: #33FFAA;
     }
     .item4{
@@ -32,5 +39,5 @@
     <div class="item item1">1</div>
     <div class="item item2">2</div>
     <div class="item item3">3</div>
-    <div class="item item4">4</div>
+    <!-- <div class="item item4">4</div> -->
 </div>

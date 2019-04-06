@@ -159,6 +159,62 @@ flex 會將畫面依照 item 的比例均分
 }
 ```
 
+### justify-content
+
+這個屬性，會是根據主軸 <code>flex-direction</code> 來做水平的對齊，因此如果 direction: column 就會變成是做垂直的對齊。
+
+有以下幾種設定可以使用
+
+```css
+.flex-container {
+    justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+```
+
+在以下的例子，先把 item4 拿掉，讓剩下三個 item 加總寬度不滿螢幕寬
+
+<code>justify-content: flex-start</code>
+
+flex-start 是預設值，item 會從左到右開始排列
+
+![flex09](../img/css/css_flex_09.png "flex09")
+
+<code>justify-content: flex-end</code>
+
+flex-end 也就是會貼齊右邊
+
+![flex10](../img/css/css_flex_10.png "flex10")
+
+<code>justify-content: center</code>
+
+center 也就是置中對齊
+
+![flex11](../img/css/css_flex_11.png "flex11")
+
+所以只要當 direction 為 column 的時候，就可以輕易做到垂直置中對齊。注意的是這裡的 container 必須要有 height (250px)
+
+![flex12](../img/css/css_flex_12.png "flex12")
+
+<code>justify-content: space-between </code>
+
+代表平均在 item 中間有 space 隔開
+
+![flex13](../img/css/css_flex_13.png "flex13")
+
+相對的如果是 direction 為 column 時，一樣能垂直平分
+
+![flex14](../img/css/css_flex_14.png "flex14")
+
+<code>justify-content: space-around</code>
+
+space-around 跟上一個的差別就是 item 會被 space 包圍平分
+
+![flex15](../img/css/css_flex_15.png "flex15")
+
+
+### align-items
+
+
 
 ## Reference
 * http://www.oxxostudio.tw/articles/201501/css-flexbox.html
