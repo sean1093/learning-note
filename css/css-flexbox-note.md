@@ -166,7 +166,7 @@ flex 會將畫面依照 item 的比例均分
 有以下幾種設定可以使用
 
 ```css
-.flex-container {
+.container {
     justify-content: flex-start | flex-end | center | space-between | space-around;
 }
 ```
@@ -214,6 +214,56 @@ space-around 跟上一個的差別就是 item 會被 space 包圍平分
 
 ### align-items
 
+這個屬性是用來設定垂直於主軸的“Cross axis”(交錯軸)，剛好是與 <code>flex-direction</code> 相反的。
+
+```css
+.container {
+    align-items: flex-start | flex-end | center | stretch | baseline;
+}
+```
+先以 <code>flex-direction: row</code> 為基礎來看，將 item 設定一下高度
+
+```css
+.item1{
+    width: 100px;
+    height: 50px;
+    background: #FF8888;
+}
+.item2{
+    width: 200px;
+    height: 100px;
+    background: #9999FF;
+}
+.item3{
+    width: 300px;
+    height: 150px;
+    background: #33FFAA;
+}
+```
+
+<code>align-items: flex-start </code>
+
+此為預設的屬性，也就是在垂直(因為現在是 row，所以他的 cross axis 就會是垂直的)的部分會從開始點往下。
+
+![flex16](../img/css/css_flex_16.png "flex16")
+
+<code>align-items: flex-end </code>
+
+也就是相對於前一個，從 end 開始
+
+![flex17](../img/css/css_flex_17.png "flex17")
+
+<code>align-items: center </code>
+
+垂直至中
+
+![flex18](../img/css/css_flex_18.png "flex18")
+
+<code>align-items: stretch </code>
+
+在 item 不設定自己的寬度 / 高度之下，這個屬性會將所有 item 撐到跟 container 一樣寬(高)
+
+![flex19](../img/css/css_flex_19.png "flex19")
 
 
 ## Reference
