@@ -257,13 +257,13 @@ space-around 跟上一個的差別就是 item 會被 space 包圍平分
 
 垂直至中
 
-![flex18](../img/css/css_flex_18.png "flex18")
+![flex19](../img/css/css_flex_19.png "flex19")
 
 <code>align-items: stretch </code>
 
 在 item 不設定自己的寬度 / 高度之下，這個屬性會將所有 item 撐到跟 container 一樣寬(高)
 
-![flex19](../img/css/css_flex_19.png "flex19")
+![flex18](../img/css/css_flex_18.png "flex18")
 
 
 ## Reference
