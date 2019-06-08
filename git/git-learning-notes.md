@@ -174,6 +174,13 @@ $ git stash pop
 $ git stash apply stash@{0}
 ```
 
+如果要清除所有的 stash，使用 clear
+
+```zsh
+$ git stash clear
+```
+
+
 ### git log
 
 可以查看 log
