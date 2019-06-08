@@ -127,7 +127,6 @@ const removed = array.splice(3,2)
 console.log(array)      // [4, 6, 8, 4, 5, 6]
 // return 要刪除的部分
 console.log(removed)    // [3, 9]
-
 ```
 
 差別差在 slice 不會更改原來的陣列，splice 會更改原來的陣列
@@ -138,7 +137,6 @@ array.slice(0,3)
 console.log(array) //[4, 6, 8, 3, 9]
 array.splice(0,3)
 console.log(array) //[3, 9]
-
 ```
 
 ### call & apply
@@ -176,33 +174,100 @@ changeInfo.call(obj, 'Sean');
 console.log(obj);
 // {name: "Sean", age: undefined}
 ```
+### map
+
+對 array 中所有 element 處理過後再回傳新的 array
+
+<code>Array.prototype.map(function(currentValue, index, arr), thisValue);</code>
+* args
+  * currentValue: 每個 element
+  * <code>(optional)</code> index: 當下這個 currentValue 在 array 之中的 index
+  * <code>(optional)</code> arr: 會傳入正在操作的這個 array
+  * <code>(optional)</code> thisValue: 可以指定 function 內的 this 值，如果不給的話就是預設的
+* map 不會改變本來的 array，會回傳一個改變過後新的 array
+
+ex: 把所有陣列中大於 5 的數字減 5，小於等於 5 的數字加 5
+
+```js
+const newArray = [2, 5, 7, 9].map((e) => {
+    if (e > 5) return e - 5;
+    else return e + 5;
+});
+// newArray = [7, 10, 2, 4]
+```
+
+<strong>Detail args 解釋</strong>
+
+```js
+const array = [1, 2, 3];
+const newArray = [2, 5, 7, 9].map(function (e, index, array) {
+    console.log(e);
+    console.log(index);
+    console.log(array);
+    console.log(this);
+    if (e > 5) return e - 5;
+    else return e + 5;
+}, array);
+```
+
+在這個例子中，每一個回圈 array 都會是本來的 [2, 5, 7, 9]，this 會變成 array [1, 2, 3]
+
+但是如果把 function 換成 arrow function，這樣 bind this 的功能就會失效，變成預設的 this
+
+<strong>arrow functions cannot be bound</strong>
+
+可參考: https://stackoverflow.com/questions/34556558/what-is-the-purpose-of-thisarg-in-foreach
 
 ### filter
 
 從 array 中找出回傳 true 的 element
 
+<code>Array.prototype.filter(function(currentValue, index, arr), thisValue);</code>
+* args
+  * currentValue: 每個 element
+  * <code>(optional)</code> index: 當下這個 currentValue 在 array 之中的 index
+  * <code>(optional)</code> arr: 會傳入正在操作的這個 array
+  * <code>(optional)</code> thisValue: 可以指定 function 內的 this 值，如果不給的話就是預設的
+* filter 不會改變本來的 array，會回傳一個改變過後新的 array
+
 ex: 找出陣列中小於 5 的數字
 
 ```js
-const newArray = [2,6,10,9,3,7,5,4,-1].filter((e) => {
+const newArray = [2, 6, 10, 9, 3, 7, 5, 4, -1].filter((e) => {
     if (e < 5) return true;
     else return false;
 })
 // newArray = [2, 3, 4, -1]
 ```
 
-### map
+### reduce
 
-對 array 中所有 element 處理過後再回傳新的 array
+這是一個可以作為累加器的 function
 
-ex: 把所有陣列中大於 5 的數字減 5，小於等於 5 的數字加 5
+<code>array.reduce(function(total, currentValue, currentIndex, arr), initValue)</code>
+* args
+  * total: 累加的初始值
+  * currentValue: 每個 element
+  * <code>(optional)</code> currentIndex: 當下這個 currentValue 在 array 之中的 index
+  * <code>(optional)</code> arr: 會傳入正在操作的這個 array
+  * <code>(optional)</code> initValue: 可以指定初始值
+* filter 不會改變本來的 array，會回傳一個累加完成的值
 
 ```js
-const newArray = [2,5,7,9].map((e) => {
-    if (e > 5) return e - 5;
-    else return e + 5;
-})
-// newArray = [7, 10, 2, 4]
+Array.prototype.reduce(
+  (total, currentValue, currentIndex, array) => {
+    return accumulator + currentValue;
+  },
+  initValue
+);
+
+// example
+// 基本用法，從 array 第一個值 & initValue = 0 開始累加
+[0, 1, 2, 3, 4].reduce( (total, curr) => total + curr ); // 10
+
+// 給予初始值 = 10，所以會從 10 開始累加每個 array 的值
+[0, 1, 2, 3, 4].reduce( (total, curr) => total + curr, 10 ); // 20
+
 ```
 
 ### sort
@@ -221,17 +286,15 @@ scores.sort(); // [1, 10, 2, 21]
 let things = ['word', 'Word', '1 Word', '2 Words'];
 things.sort(); // ['1 Word', '2 Words', 'Word', 'word']
 
-// 在Unicode中, 數字在大寫字母前,
+// 在 Unicode 中, 數字在大寫字母前,
 // 大寫字母在小寫字母前
 ```
 
 #### compareFunction
 
-* 觀念:
-
-1. compareFunction(a, b) return 小於 0, 將 a 排在比 b index 還小處
-2. compareFunction(a, b) return 0, a 與 b 互相不會改變順序
-3. compareFunction(a, b) return 大於 0, 將 b 排在比 a index 還小處
+* compareFunction(a, b) return 小於 0, 將 a 排在比 b index 還小處
+* compareFunction(a, b) return 0, a 與 b 互相不會改變順序
+* compareFunction(a, b) return 大於 0, 將 b 排在比 a index 還小處
 
 最常見的例子就是實作 sort by number
 
@@ -244,26 +307,6 @@ const array2 = [8,10,3,6,1,39];
 // 這裡利用 a-b ，如果 a < b 這樣就會回傳負數值，a 就會被排在比 b index 還小處
 array2.sort((a,b)=> a-b)
 // ==> [1, 3, 6, 8, 10, 39]
-
-```
-
-### reduce
-
-這是一個可以作為累加器的 function
-
-```js
-Array.prototype.reduce(
-  (accumulator, currentValue, currentIndex, array) => {
-    return accumulator + currentValue;
-  },
-  initValue
-);
-
-// example
-
-[0, 1, 2, 3, 4].reduce( (prev, curr) => prev + curr ); // 10
-
-[0, 1, 2, 3, 4].reduce( (prev, curr) => prev + curr, 10 ); // 20
 
 ```
 
