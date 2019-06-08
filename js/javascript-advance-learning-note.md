@@ -203,3 +203,80 @@ func({value: 'AAA'}) // undefined
 func.call({value: 'BBB'}) // BBB
 ```
 
+## Get remote data
+
+使用網路上 fake api 'https://randomuser.me/api/'
+
+### XMLHttp​Request
+
+一開始的 AJAX 技術使用 XMLHttp​Request，對伺服器端送出 httpRequest(要求)，資料格式是 XML 格式
+
+```js
+// success
+function reqOnLoad() {
+    const data = JSON.parse(this.responseText);
+    console.log(data);
+}
+// fail
+function reqOnError(err) {
+    console.error('Fetch Error', err);
+}
+
+const oReq = new XMLHttpRequest();
+oReq.onload = reqOnLoad;
+oReq.onerror = reqOnError;
+oReq.open('get', 'https://randomuser.me/api/', true);
+// 送出請求
+oReq.send();
+```
+
+### JQuery Ajax
+
+jQuery 把原生的 XMLHttp​Request 打包一層，成為更好使用的 ajax api call
+
+```js
+$.ajax({
+    url: 'https://randomuser.me/api/',
+    dataType: 'json',
+    success: function(data) {
+        // success
+        console.log(data);
+    },
+    error: function(error) {
+        // fail
+        console.error('Fetch Error', err);
+    }
+});
+```
+
+### fetch
+
+Fetch 是 HTML5 的 API，使用 ES6 Promise，如果瀏覽器沒有 Fetch 或是 Promise 都必須要使用 polyfill
+
+fetch() 是位於全域 window 物件的方法，會回傳 Promise 物件
+
+當 fetch 收到錯誤 HTTP 狀態代碼的時候 (400, 500)，還是會被認為是成功的 resolve，因此需要多一層處理。只有當網路問題才會被視為 reject
+
+```js
+fetch('https://randomuser.me/api/', { method: 'get' })
+.then(function(response) {
+    if (response.status >= 200 && response.status < 300) {
+       return response.json()
+    } else {
+       var error = new Error(response.statusText)
+       error.response = response
+       throw error
+    }
+}).then(function(data) {
+    // success
+    console.log(data)
+}).catch(function(error) {
+    return error.response.json();
+}).then(function(errorData){
+    // fail
+    console.error('Fetch Error', errorData);
+});
+```
+
+reference:
+* https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/ajax_fetch.html
